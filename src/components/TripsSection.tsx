@@ -1,5 +1,16 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Clock, Star, Compass, ArrowRight, MessageCircle, Zap } from 'lucide-react';
+import {
+  Search,
+  Clock,
+  Star,
+  Compass,
+  ArrowRight,
+  MessageCircle,
+  Zap,
+  Share2,
+  Facebook,
+  Check
+} from 'lucide-react';
 import { Trip, TripCategory, CurrencyCode } from '../types';
 import { TRIPS_DATA } from '../data/trips';
 import { SupportedLanguage, TRANSLATIONS } from '../data/translations';
@@ -19,6 +30,42 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
   const [selectedCat, setSelectedCat] = useState<TripCategory>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTrip, setSelectedTrip] = useState<Trip | null>(null);
+  const [copiedTripId, setCopiedTripId] = useState<string | null>(null);
+
+  const handleNativeShareTrip = async (
+    trip: Trip,
+    formattedPrice: string,
+    e: React.MouseEvent
+  ) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://egytours.com';
+    const shareData = {
+      title: `${trip.title} - EGY TOURS Egypt`,
+      text: `Book ${trip.title} (${formattedPrice}) with EGY TOURS. VIP service, instant WhatsApp confirmation, 0% advance deposit!`,
+      url: shareUrl
+    };
+
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      try {
+        await navigator.share(shareData);
+        return;
+      } catch (err: unknown) {
+        if ((err as Error)?.name === 'AbortError') return;
+      }
+    }
+
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard) {
+        await navigator.clipboard.writeText(`${trip.title} (${formattedPrice}) - ${shareUrl}`);
+        setCopiedTripId(trip.id);
+        setTimeout(() => setCopiedTripId(null), 2500);
+      }
+    } catch (err) {
+      console.warn('Clipboard failed:', err);
+    }
+  };
 
   const t = (key: string) => TRANSLATIONS[currentLang]?.[key] || TRANSLATIONS['en'][key] || key;
 
@@ -43,10 +90,10 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
   }, [selectedCat, searchQuery]);
 
   return (
-    <section id="trips" className="py-20 bg-[#0a0a0a] relative">
+    <section id="trips" className="py-14 sm:py-20 bg-[#0a0a0a] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           <h2 className="section-title">Our Tours & Excursions</h2>
           <span className="gold-line" />
           <p className="section-subtitle">
@@ -54,14 +101,14 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
           </p>
 
           {/* Search Bar */}
-          <div className="relative max-w-md mx-auto mb-8">
+          <div className="relative max-w-md mx-auto mb-6 sm:mb-8">
             <Search className="w-4 h-4 text-[#D4AF37] absolute left-3.5 top-3.5 pointer-events-none" />
             <input
               type="text"
               placeholder={t('search_placeholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-full bg-[#141414] border border-[#D4AF37]/30 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-[#FFD700] focus:ring-1 focus:ring-[#FFD700] transition-all"
+              className="w-full pl-10 pr-4 py-2.5 rounded-full bg-[#141414] border border-[#D4AF37]/30 text-xs sm:text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-[#FFD700] focus:ring-1 focus:ring-[#FFD700] transition-all"
             />
             {searchQuery && (
               <button
@@ -75,13 +122,13 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
           </div>
 
           {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 type="button"
                 onClick={() => setSelectedCat(cat.id)}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase transition-all duration-200 cursor-pointer ${
+                className={`px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[0.7rem] sm:text-xs font-semibold tracking-wide uppercase transition-all duration-200 cursor-pointer ${
                   selectedCat === cat.id
                     ? 'bg-gradient-to-r from-[#9a761e] to-[#D4AF37] text-black shadow-lg shadow-[#D4AF37]/20 font-bold scale-105'
                     : 'bg-[#141414] border border-[#D4AF37]/25 text-zinc-300 hover:border-[#D4AF37] hover:text-[#FFD700]'
@@ -225,6 +272,67 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
                             </div>
                             <div className="w-2 h-2 bg-[#0a1814] border-r border-b border-[#D4AF37]/80 transform rotate-45 mx-auto -mt-1" />
                           </div>
+                        </div>
+                      </div>
+
+                      {/* Social Share Bar: Facebook & WhatsApp */}
+                      <div className="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between gap-2">
+                        <div className="flex items-center gap-1 text-[0.68rem] text-zinc-400 font-medium">
+                          <Share2 className="w-3 h-3 text-[#D4AF37]" />
+                          <span>Share:</span>
+                        </div>
+
+                        <div className="flex items-center gap-1.5">
+                          {/* WhatsApp Share Button */}
+                          <a
+                            href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+                              `Check out this excursion in Egypt: ${trip.title} (${priceInfo.formatted}) - ${trip.shortDesc}\n${
+                                typeof window !== 'undefined' ? window.location.href : 'https://egytours.com'
+                              }`
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-[#25D366]/15 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-[#25D366]/35 text-[0.68rem] font-bold transition-all shadow-sm hover:scale-[1.03] cursor-pointer"
+                            title={`Share ${trip.title} on WhatsApp`}
+                            aria-label={`Share ${trip.title} on WhatsApp`}
+                          >
+                            <MessageCircle className="w-3 h-3" />
+                            <span>WhatsApp</span>
+                          </a>
+
+                          {/* Facebook Share Button */}
+                          <a
+                            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                              typeof window !== 'undefined' ? window.location.href : 'https://egytours.com'
+                            )}&quote=${encodeURIComponent(
+                              `Check out ${trip.title} with EGY TOURS - VIP Excursions in Egypt!`
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-[#1877F2]/15 hover:bg-[#1877F2] text-[#1877F2] hover:text-white border border-[#1877F2]/35 text-[0.68rem] font-bold transition-all shadow-sm hover:scale-[1.03] cursor-pointer"
+                            title={`Share ${trip.title} on Facebook`}
+                            aria-label={`Share ${trip.title} on Facebook`}
+                          >
+                            <Facebook className="w-3 h-3" />
+                            <span>Facebook</span>
+                          </a>
+
+                          {/* Native Mobile Share / Copy Link Button */}
+                          <button
+                            type="button"
+                            onClick={(e) => handleNativeShareTrip(trip, priceInfo.formatted, e)}
+                            className="p-1 rounded-md bg-white/5 hover:bg-white/15 text-zinc-300 hover:text-[#FFD700] border border-white/10 text-[0.68rem] transition-all hover:scale-[1.05] cursor-pointer"
+                            title={`Share ${trip.title} via mobile menu or copy`}
+                            aria-label={`Share ${trip.title} via mobile menu`}
+                          >
+                            {copiedTripId === trip.id ? (
+                              <Check className="w-3 h-3 text-emerald-400" />
+                            ) : (
+                              <Share2 className="w-3 h-3 text-zinc-300" />
+                            )}
+                          </button>
                         </div>
                       </div>
                     </div>

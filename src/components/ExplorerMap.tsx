@@ -13,10 +13,10 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
   const t = (key: string) => TRANSLATIONS[currentLang]?.[key] || TRANSLATIONS['en'][key] || key;
 
   return (
-    <section id="map-section" className="py-20 bg-[#0a0a0a] border-t border-[#D4AF37]/15 relative">
+    <section id="map-section" className="py-14 sm:py-20 bg-[#0a0a0a] border-t border-[#D4AF37]/15 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/30 text-[#FFD700] text-xs font-bold uppercase tracking-wider mb-3">
             <Compass className="w-3.5 h-3.5" />
             <span>Red Sea Explorer</span>
@@ -30,7 +30,7 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
         {/* Map Grid Container */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           {/* Interactive Visual Map Card (8 cols) */}
-          <div className="lg:col-span-8 p-4 sm:p-6 rounded-2xl bg-[#111111] border-2 border-[#D4AF37]/30 shadow-2xl relative overflow-hidden">
+          <div className="lg:col-span-8 p-3 sm:p-6 rounded-2xl bg-[#111111] border-2 border-[#D4AF37]/30 shadow-2xl relative overflow-hidden">
             {/* Corner Luxury Brackets */}
             <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#D4AF37] pointer-events-none" />
             <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#D4AF37] pointer-events-none" />
@@ -38,7 +38,7 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
             <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#D4AF37] pointer-events-none" />
 
             {/* Embedded Google Maps / Interactive Stage */}
-            <div className="relative w-full h-[380px] sm:h-[440px] rounded-xl overflow-hidden bg-[#0c131a] border border-white/10">
+            <div className="relative w-full h-[320px] sm:h-[440px] rounded-xl overflow-hidden bg-[#0c131a] border border-white/10">
               <iframe
                 title="EGY TOURS Hurghada Red Sea & Cairo Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113642.48395232938!2d33.72260655452417!3d27.22285191398864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145287a1770e2815%3A0x7d97e889a7140f7b!2sHurghada%2C%20Red%20Sea%20Governorate%2C%20Egypt!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg"
@@ -51,16 +51,16 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
               />
 
               {/* Overlay Active Point Pill */}
-              <div className="absolute top-4 left-4 p-3.5 rounded-xl bg-black/85 backdrop-blur-md border border-[#D4AF37]/40 max-w-xs shadow-xl">
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 p-2.5 sm:p-3.5 rounded-xl bg-black/85 backdrop-blur-md border border-[#D4AF37]/40 max-w-[calc(100%-1.5rem)] sm:max-w-xs shadow-xl">
                 <div className="flex items-center gap-2 mb-1">
                   <div className="w-2.5 h-2.5 rounded-full bg-[#FFD700] animate-ping" />
                   <span className="text-xs font-bold text-[#FFD700] uppercase tracking-wider">
                     {activePoint.type}
                   </span>
                 </div>
-                <h4 className="text-sm font-bold text-white mb-0.5">{activePoint.name}</h4>
-                <p className="text-xs text-zinc-300 leading-snug">{activePoint.description}</p>
-                <div className="mt-2 text-[0.65rem] text-zinc-400 font-mono">
+                <h4 className="text-xs sm:text-sm font-bold text-white mb-0.5">{activePoint.name}</h4>
+                <p className="text-[0.7rem] sm:text-xs text-zinc-300 leading-snug">{activePoint.description}</p>
+                <div className="mt-1.5 sm:mt-2 text-[0.65rem] text-zinc-400 font-mono">
                   GPS: {activePoint.lat.toFixed(4)}° N, {activePoint.lng.toFixed(4)}° E
                 </div>
               </div>

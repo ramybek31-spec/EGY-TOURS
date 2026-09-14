@@ -106,7 +106,7 @@ export const BentoGallery: React.FC<BentoGalleryProps> = ({ currentLang }) => {
   ];
 
   return (
-    <section id="gallery" className="py-20 bg-[#070707] relative">
+    <section id="gallery" className="py-14 sm:py-20 bg-[#070707] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title">Capture the Moments</h2>
         <span className="gold-line" />
@@ -139,8 +139,8 @@ export const BentoGallery: React.FC<BentoGalleryProps> = ({ currentLang }) => {
         </div>
 
         {/* Gallery CTA */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mt-12">
-          <a href="#trips" className="btn-gold">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-12 w-full sm:w-auto">
+          <a href="#trips" className="btn-gold w-full sm:w-auto justify-center">
             <Compass className="w-4 h-4" />
             <span>{t('explore_trips')}</span>
           </a>
@@ -148,7 +148,7 @@ export const BentoGallery: React.FC<BentoGalleryProps> = ({ currentLang }) => {
             href="https://wa.me/201107871007?text=Hello%20EGY%20TOURS!%20I%20saw%20your%20gallery%20and%20would%20like%20to%20book%20a%20tour."
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline-gold"
+            className="btn-outline-gold w-full sm:w-auto justify-center"
           >
             <MessageCircle className="w-4 h-4" />
             <span>{t('book_whatsapp')}</span>
@@ -160,31 +160,31 @@ export const BentoGallery: React.FC<BentoGalleryProps> = ({ currentLang }) => {
       {activeImage && (
         <div
           onClick={() => setActiveImage(null)}
-          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200"
         >
           <button
             type="button"
             onClick={() => setActiveImage(null)}
-            className="absolute top-6 right-6 w-11 h-11 rounded-full bg-[#161616] border border-[#D4AF37] text-[#FFD700] hover:bg-[#D4AF37] hover:text-black transition-colors flex items-center justify-center cursor-pointer z-50"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#161616] border border-[#D4AF37] text-[#FFD700] hover:bg-[#D4AF37] hover:text-black transition-colors flex items-center justify-center cursor-pointer z-50"
             aria-label="Close image viewer"
           >
-            <X className="w-6 h-6" />
+            <X className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl max-h-[85vh] flex flex-col items-center"
+            className="relative max-w-4xl max-h-[85vh] flex flex-col items-center w-full px-2"
           >
             <img
               src={activeImage.src}
               alt={activeImage.title}
-              className="max-w-full max-h-[75vh] object-contain rounded-xl border border-[#D4AF37]/40 shadow-2xl"
+              className="max-w-full max-h-[70vh] sm:max-h-[75vh] object-contain rounded-xl border border-[#D4AF37]/40 shadow-2xl"
             />
-            <div className="mt-4 flex items-center gap-3">
-              <span className="px-2.5 py-1 rounded-full bg-[#D4AF37] text-black text-xs font-bold uppercase">
+            <div className="mt-3 sm:mt-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-center">
+              <span className="px-2.5 py-0.5 rounded-full bg-[#D4AF37] text-black text-[0.7rem] sm:text-xs font-bold uppercase">
                 {activeImage.tag}
               </span>
-              <span className="font-heading text-lg font-bold text-white">{activeImage.title}</span>
+              <span className="font-heading text-base sm:text-lg font-bold text-white">{activeImage.title}</span>
             </div>
           </div>
         </div>

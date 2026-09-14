@@ -11,9 +11,9 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
   const t = (key: string) => TRANSLATIONS[currentLang]?.[key] || TRANSLATIONS['en'][key] || key;
 
   return (
-    <footer id="footer" className="bg-[#050505] border-t border-[#D4AF37]/25 pt-16 pb-8 text-zinc-400 text-xs">
+    <footer id="footer" className="bg-[#050505] border-t border-[#D4AF37]/25 pt-12 sm:pt-16 pb-8 text-zinc-400 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
           {/* Col 1: Brand & Bio */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -213,11 +213,69 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
 
           <div className="text-[0.7rem] text-zinc-400">
             * DESIGNED BY{' '}
-            <span
-              className="text-[#D4AF37] font-bold cursor-pointer hover:text-white transition-colors"
-              title="Phone: +201224278490 | +201107871007"
-            >
-              ROMERO'S STUDIOS
+            <span className="relative group inline-block">
+              <span
+                id="romero-studios-credit"
+                className="text-[#D4AF37] font-bold cursor-pointer hover:text-white transition-colors underline decoration-[#D4AF37]/40 hover:decoration-white underline-offset-2"
+                title="Phone: +201224278490 | +201107871007"
+                tabIndex={0}
+                aria-haspopup="dialog"
+                aria-label="ROMERO'S STUDIOS - View contact phone numbers"
+              >
+                ROMERO'S STUDIOS
+              </span>
+
+              {/* Hover Tooltip displaying phone numbers */}
+              <div
+                id="romero-studios-phone-tooltip"
+                role="tooltip"
+                className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 w-64 p-3 rounded-xl bg-[#0a1814]/98 dark:bg-[#061410]/98 backdrop-blur-xl border border-[#D4AF37] shadow-[0_12px_32px_rgba(0,0,0,0.7),0_0_20px_rgba(212,175,55,0.3)] text-white text-left opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible translate-y-1.5 group-hover:translate-y-0 group-focus-within:translate-y-0 transition-all duration-200 ease-out z-50 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto select-none"
+              >
+                <div className="flex items-center justify-between pb-2 mb-2 border-b border-[#D4AF37]/30">
+                  <span className="text-[0.68rem] font-bold tracking-wider uppercase text-[#FFD700]">
+                    ROMERO'S STUDIOS
+                  </span>
+                  <span className="text-[0.62rem] text-zinc-400 font-medium">Direct Contact</span>
+                </div>
+
+                <div className="space-y-1.5">
+                  <a
+                    href="tel:+201224278490"
+                    className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg bg-black/50 hover:bg-[#D4AF37]/15 border border-white/10 hover:border-[#D4AF37]/60 text-zinc-200 hover:text-[#FFD700] transition-colors group/item"
+                  >
+                    <div className="p-1 rounded-md bg-[#D4AF37]/20 text-[#D4AF37] group-hover/item:text-[#FFD700]">
+                      <Phone className="w-3.5 h-3.5" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[0.62rem] text-zinc-400">Phone & WhatsApp</span>
+                      <span className="text-xs font-mono font-bold tracking-wide text-white group-hover/item:text-[#FFD700]">
+                        +20 122 427 8490
+                      </span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="tel:+201107871007"
+                    className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg bg-black/50 hover:bg-[#D4AF37]/15 border border-white/10 hover:border-[#D4AF37]/60 text-zinc-200 hover:text-[#FFD700] transition-colors group/item"
+                  >
+                    <div className="p-1 rounded-md bg-[#D4AF37]/20 text-[#D4AF37] group-hover/item:text-[#FFD700]">
+                      <Phone className="w-3.5 h-3.5" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[0.62rem] text-zinc-400">Phone & WhatsApp</span>
+                      <span className="text-xs font-mono font-bold tracking-wide text-white group-hover/item:text-[#FFD700]">
+                        +20 110 787 1007
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Downward pointer arrow */}
+                <div
+                  className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 sm:left-auto sm:right-6 w-3 h-3 bg-[#0a1814] dark:bg-[#061410] border-r border-b border-[#D4AF37] transform rotate-45 pointer-events-none"
+                  aria-hidden="true"
+                />
+              </div>
             </span>{' '}
             *
           </div>

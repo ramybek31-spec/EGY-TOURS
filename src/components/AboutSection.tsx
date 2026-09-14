@@ -19,9 +19,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
   ];
 
   return (
-    <section id="about-strip" className="py-20 bg-gradient-to-b from-[#0a0a0a] via-[#101010] to-[#0a0a0a] border-b border-[#D4AF37]/15 relative">
+    <section id="about-strip" className="py-14 sm:py-20 bg-gradient-to-b from-[#0a0a0a] via-[#101010] to-[#0a0a0a] border-b border-[#D4AF37]/15 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Text & Features */}
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#FFD700] text-xs font-bold uppercase tracking-wider mb-4">
@@ -29,18 +29,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
               <span>Hurghada's #1 Rated Operator</span>
             </div>
 
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+            <h2 className="font-heading text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
               Why Choose <span className="bg-gradient-to-r from-[#D4AF37] to-[#FFD700] bg-clip-text text-transparent">EGY TOURS</span>?
             </h2>
 
-            <div className="w-20 h-1 bg-gradient-to-r from-[#D4AF37] to-transparent rounded mb-6" />
+            <div className="w-20 h-1 bg-gradient-to-r from-[#D4AF37] to-transparent rounded mb-5" />
 
-            <p className="text-zinc-300 leading-relaxed text-base sm:text-lg mb-8">
+            <p className="text-zinc-300 leading-relaxed text-sm sm:text-base lg:text-lg mb-6 sm:mb-8">
               {t('why_choose_desc')}
             </p>
 
             {/* Features 2-column Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
               {features.map((feat, i) => (
                 <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-[#141414] border border-white/5 hover:border-[#D4AF37]/30 transition-colors">
                   <div className="w-5 h-5 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#FFD700] flex-shrink-0 mt-0.5">
@@ -55,10 +55,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
             </div>
 
             {/* CTA */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4">
               <a
                 href="#trips"
-                className="btn-gold text-xs"
+                className="btn-gold text-xs justify-center"
               >
                 <span>Browse All Tours</span>
                 <span>→</span>
@@ -68,7 +68,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
                 href="https://wa.me/201107871007?text=Hello%20EGY%20TOURS!%20I%20have%20a%20question%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 text-zinc-300 hover:text-white hover:border-[#25D366] text-xs font-semibold transition-all"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 text-zinc-300 hover:text-white hover:border-[#25D366] text-xs font-semibold transition-all"
               >
                 <MessageCircle className="w-4 h-4 text-[#25D366]" />
                 <span>Chat With Our Team</span>
@@ -86,13 +86,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/70 backdrop-blur-md border border-[#D4AF37]/30 flex items-center justify-between">
-                <div>
-                  <div className="text-xs text-[#FFD700] uppercase font-bold tracking-wider">Red Sea Perfection</div>
-                  <div className="text-sm font-semibold text-white">Daily VIP Departures from Hurghada Marina</div>
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 p-3 sm:p-4 rounded-xl bg-black/75 backdrop-blur-md border border-[#D4AF37]/30 flex items-center justify-between gap-2">
+                <div className="min-w-0">
+                  <div className="text-[0.65rem] sm:text-xs text-[#FFD700] uppercase font-bold tracking-wider truncate">Red Sea Perfection</div>
+                  <div className="text-xs sm:text-sm font-semibold text-white truncate">Daily VIP Departures from Hurghada Marina</div>
                 </div>
-                <div className="w-10 h-10 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#FFD700]">
-                  <HeartHandshake className="w-5 h-5" />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#FFD700] flex-shrink-0">
+                  <HeartHandshake className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
               </div>
             </div>

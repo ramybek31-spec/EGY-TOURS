@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Globe, DollarSign, MessageCircle, Film } from 'lucide-react';
+import { Menu, X, Phone, Globe, MessageCircle, Film } from 'lucide-react';
 import { CurrencyCode } from '../types';
 import { SupportedLanguage, SUPPORTED_LANGUAGES, TRANSLATIONS } from '../data/translations';
 import egytoursLogo from '../assets/images/egytours_logo_1789090112855.jpg';
@@ -22,7 +22,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
-  const [currDropdownOpen, setCurrDropdownOpen] = useState(false);
 
   const t = (key: string) => TRANSLATIONS[currentLang]?.[key] || TRANSLATIONS['en'][key] || key;
 
@@ -34,16 +33,11 @@ export const Navbar: React.FC<NavbarProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const currencies: CurrencyCode[] = ['EUR', 'USD', 'GBP', 'EGP'];
-
   const navLinks = [
     { label: t('nav_home'), href: '#hero' },
     { label: t('nav_trips'), href: '#trips' },
     { label: t('nav_gallery'), href: '#gallery' },
-    { label: t('nav_reviews'), href: '#reviews' },
-    { label: t('nav_map'), href: '#map-section' },
-    { label: t('nav_info'), href: '#info-section' },
-    { label: t('nav_faq'), href: '#faq' }
+    { label: t('nav_reviews'), href: '#reviews' }
   ];
 
   return (
@@ -51,14 +45,14 @@ export const Navbar: React.FC<NavbarProps> = ({
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'py-2.5 bg-[#080808]/95 backdrop-blur-md border-b border-[#D4AF37]/25 shadow-xl shadow-black/60'
-            : 'py-4 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-[#D4AF37]/15'
+            ? 'py-2 sm:py-2.5 bg-[#080808]/95 backdrop-blur-md border-b border-[#D4AF37]/25 shadow-xl shadow-black/60'
+            : 'py-3 sm:py-4 bg-[#0a0a0a]/85 backdrop-blur-sm border-b border-[#D4AF37]/15'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-3 group text-decoration-none">
-            <div className="w-12 h-12 rounded-full border-2 border-[#D4AF37] p-0.5 bg-[#141414] shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 group-hover:border-[#FFD700]">
+          <a href="#hero" className="flex items-center gap-2 sm:gap-3 group text-decoration-none min-w-0">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#D4AF37] p-0.5 bg-[#141414] shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 group-hover:border-[#FFD700] flex-shrink-0">
               <img
                 src={egytoursLogo}
                 alt="EGY TOURS Logo"
@@ -66,11 +60,11 @@ export const Navbar: React.FC<NavbarProps> = ({
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="font-heading text-lg sm:text-xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#E8E8E8] bg-clip-text text-transparent tracking-wider leading-tight">
+            <div className="flex flex-col min-w-0">
+              <span className="font-heading text-base sm:text-xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#E8E8E8] bg-clip-text text-transparent tracking-wider leading-tight truncate">
                 EGY TOURS
               </span>
-              <span className="text-[0.6rem] text-[#C0C0C0] tracking-[0.18em] uppercase font-semibold">
+              <span className="hidden xs:inline text-[0.55rem] sm:text-[0.6rem] text-[#C0C0C0] tracking-[0.12em] sm:tracking-[0.18em] uppercase font-semibold truncate">
                 TRAVEL & ADVENTURE • EGYPT
               </span>
             </div>
@@ -89,57 +83,19 @@ export const Navbar: React.FC<NavbarProps> = ({
             ))}
           </nav>
 
-          {/* Right Controls: Currency, Language, WhatsApp CTA, Mobile Toggle */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            {/* Currency Selector */}
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => {
-                  setCurrDropdownOpen(!currDropdownOpen);
-                  setLangDropdownOpen(false);
-                }}
-                className="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-[#161616] border border-[#D4AF37]/30 text-xs font-semibold text-[#FFD700] hover:border-[#D4AF37] transition-all cursor-pointer"
-                title="Select Currency"
-              >
-                <DollarSign className="w-3.5 h-3.5 text-[#D4AF37]" />
-                <span>{currentCurrency}</span>
-              </button>
-
-              {currDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-28 bg-[#111111] border border-[#D4AF37]/40 rounded-xl shadow-2xl py-1.5 z-50">
-                  {currencies.map((curr) => (
-                    <button
-                      key={curr}
-                      type="button"
-                      onClick={() => {
-                        onCurrencyChange(curr);
-                        setCurrDropdownOpen(false);
-                      }}
-                      className={`w-full text-left px-3 py-1.5 text-xs flex items-center justify-between hover:bg-[#D4AF37]/15 transition-colors ${
-                        currentCurrency === curr ? 'text-[#FFD700] font-bold bg-[#D4AF37]/10' : 'text-[#E8E8E8]'
-                      }`}
-                    >
-                      <span>{curr}</span>
-                      {currentCurrency === curr && <span className="text-[#FFD700]">✓</span>}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
+          {/* Right Controls: Language, WhatsApp CTA, Mobile Toggle */}
+          <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
             {/* Language Selector */}
             <div className="relative">
               <button
                 type="button"
                 onClick={() => {
                   setLangDropdownOpen(!langDropdownOpen);
-                  setCurrDropdownOpen(false);
                 }}
-                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#161616] border border-[#D4AF37]/30 text-xs font-medium text-[#E8E8E8] hover:border-[#D4AF37] transition-all cursor-pointer"
+                className="flex items-center gap-1 px-2 py-1.5 sm:px-2.5 sm:py-1.5 rounded-full bg-[#161616] border border-[#D4AF37]/30 text-[0.72rem] sm:text-xs font-medium text-[#E8E8E8] hover:border-[#D4AF37] transition-all cursor-pointer"
                 title="Select Language"
               >
-                <Globe className="w-3.5 h-3.5 text-[#D4AF37]" />
+                <Globe className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D4AF37]" />
                 <span className="uppercase">{currentLang}</span>
               </button>
 
@@ -213,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer Menu */}
       <div
-        className={`fixed top-16 left-0 right-0 bg-[#0c0c0c]/98 border-b-2 border-[#D4AF37] backdrop-blur-2xl z-40 lg:hidden transition-all duration-300 transform ${
+        className={`fixed top-14 sm:top-16 left-0 right-0 max-h-[calc(100vh-3.5rem)] sm:max-h-[calc(100vh-4rem)] overflow-y-auto bg-[#0c0c0c]/98 border-b-2 border-[#D4AF37] backdrop-blur-2xl z-40 lg:hidden transition-all duration-300 transform ${
           mobileMenuOpen ? 'translate-y-0 opacity-100 shadow-2xl' : '-translate-y-full opacity-0 pointer-events-none'
         }`}
       >

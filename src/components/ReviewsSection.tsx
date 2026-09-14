@@ -16,54 +16,54 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({ currentLang }) =
     : REVIEWS_DATA.filter((r) => r.platform === activePlatformFilter);
 
   return (
-    <section id="reviews" className="py-20 bg-[#070707] border-t border-[#D4AF37]/15 relative overflow-hidden">
+    <section id="reviews" className="py-14 sm:py-20 bg-[#070707] border-t border-[#D4AF37]/15 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           <h2 className="section-title">{t('reviews_title')}</h2>
           <span className="gold-line" />
           <p className="section-subtitle">{t('reviews_sub')}</p>
 
           {/* Platform Trust Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-8">
-            <div className="flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-[#121212] border border-white/10 shadow-lg">
-              <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center font-bold text-red-500 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-6 sm:mb-8">
+            <div className="flex items-center gap-2 sm:gap-2.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl bg-[#121212] border border-white/10 shadow-lg">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center font-bold text-red-500 text-xs flex-shrink-0">
                 G
               </div>
               <div className="text-left">
                 <div className="text-xs font-bold text-white">Google Reviews</div>
-                <div className="text-[0.7rem] text-[#FFD700] font-semibold">4.9 ★★★★★ (1,250+)</div>
+                <div className="text-[0.65rem] sm:text-[0.7rem] text-[#FFD700] font-semibold">4.9 ★★★★★ (1,250+)</div>
               </div>
             </div>
 
-            <div className="flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-[#121212] border border-[#D4AF37]/30 shadow-lg">
-              <div className="w-8 h-8 rounded-full bg-[#00aa6c] flex items-center justify-center text-white font-bold text-xs">
+            <div className="flex items-center gap-2 sm:gap-2.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl bg-[#121212] border border-[#D4AF37]/30 shadow-lg">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#00aa6c] flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
                 TA
               </div>
               <div className="text-left">
                 <div className="text-xs font-bold text-white">TripAdvisor</div>
-                <div className="text-[0.7rem] text-[#FFD700] font-semibold">4.9 ★ Travellers' Choice</div>
+                <div className="text-[0.65rem] sm:text-[0.7rem] text-[#FFD700] font-semibold">4.9 ★ Travellers' Choice</div>
               </div>
             </div>
 
-            <div className="flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-[#121212] border border-white/10 shadow-lg">
-              <div className="w-8 h-8 rounded-full bg-[#ff5533] flex items-center justify-center text-white font-bold text-xs">
+            <div className="flex items-center gap-2 sm:gap-2.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl bg-[#121212] border border-white/10 shadow-lg">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#ff5533] flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
                 GYG
               </div>
               <div className="text-left">
                 <div className="text-xs font-bold text-white">GetYourGuide</div>
-                <div className="text-[0.7rem] text-[#FFD700] font-semibold">5.0 ★ Top Rated Partner</div>
+                <div className="text-[0.65rem] sm:text-[0.7rem] text-[#FFD700] font-semibold">5.0 ★ Top Rated Partner</div>
               </div>
             </div>
           </div>
 
           {/* Filter Tabs */}
-          <div className="inline-flex rounded-full bg-[#141414] p-1 border border-white/10">
+          <div className="inline-flex flex-wrap justify-center rounded-2xl sm:rounded-full bg-[#141414] p-1 border border-white/10 max-w-full gap-1">
             {(['All', 'TripAdvisor', 'Google', 'GetYourGuide'] as const).map((p) => (
               <button
                 key={p}
                 type="button"
                 onClick={() => setActivePlatformFilter(p)}
-                className={`px-3.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
+                className={`px-3 sm:px-3.5 py-1 text-[0.7rem] sm:text-xs font-semibold rounded-full transition-all cursor-pointer ${
                   activePlatformFilter === p
                     ? 'bg-[#D4AF37] text-black shadow-md'
                     : 'text-zinc-400 hover:text-white'

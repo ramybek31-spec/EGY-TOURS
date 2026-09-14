@@ -99,7 +99,7 @@ export const FloatingWidgets: React.FC = () => {
       <button
         type="button"
         onClick={toggleSound}
-        className={`fixed bottom-24 left-6 z-40 w-11 h-11 rounded-full border transition-all duration-300 flex items-center justify-center cursor-pointer shadow-xl ${
+        className={`fixed bottom-20 sm:bottom-24 left-4 sm:left-6 z-40 w-10 h-10 sm:w-11 sm:h-11 rounded-full border transition-all duration-300 flex items-center justify-center cursor-pointer shadow-xl ${
           isPlaying
             ? 'bg-[#1b170c] border-[#FFD700] text-[#FFD700] shadow-[0_0_18px_rgba(212,175,55,0.4)] animate-pulse'
             : 'bg-[#111111]/85 border-[#D4AF37]/30 text-zinc-400 hover:text-white hover:border-[#D4AF37]'
@@ -107,7 +107,7 @@ export const FloatingWidgets: React.FC = () => {
         title={isPlaying ? 'Mute Ocean Ambience' : 'Play Gentle Ocean Ambience'}
         aria-label="Toggle ocean sound"
       >
-        {isPlaying ? <Volume2 className="w-5 h-5 text-[#FFD700]" /> : <VolumeX className="w-5 h-5" />}
+        {isPlaying ? <Volume2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#FFD700]" /> : <VolumeX className="w-4 h-4 sm:w-5 sm:h-5" />}
       </button>
 
       {/* Back to Top Button */}
@@ -115,11 +115,11 @@ export const FloatingWidgets: React.FC = () => {
         <button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-8 right-24 sm:right-28 [dir='rtl']:right-auto [dir='rtl']:left-24 sm:[dir='rtl']:left-28 z-40 w-11 h-11 rounded-full bg-[#141414]/90 border border-[#D4AF37]/40 text-[#FFD700] hover:bg-[#D4AF37] hover:text-black transition-all duration-300 flex items-center justify-center cursor-pointer shadow-xl hover:scale-105"
+          className="fixed bottom-6 sm:bottom-8 right-20 sm:right-28 [dir='rtl']:right-auto [dir='rtl']:left-20 sm:[dir='rtl']:left-28 z-40 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#141414]/90 border border-[#D4AF37]/40 text-[#FFD700] hover:bg-[#D4AF37] hover:text-black transition-all duration-300 flex items-center justify-center cursor-pointer shadow-xl hover:scale-105"
           aria-label="Back to top"
           title="Back to top"
         >
-          <ArrowUp className="w-5 h-5" />
+          <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
       )}
     </>

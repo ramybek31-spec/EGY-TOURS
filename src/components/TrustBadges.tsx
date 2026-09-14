@@ -19,18 +19,18 @@ export const TrustBadges: React.FC<TrustBadgesProps> = ({ currentLang }) => {
   ];
 
   return (
-    <div className="py-6 bg-[#0a0a0a] border-b border-[#D4AF37]/15">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
+    <div className="py-4 sm:py-6 bg-[#0a0a0a] border-b border-[#D4AF37]/15">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 lg:gap-6">
           {badges.map((b, i) => {
             const Icon = b.icon;
             return (
               <div
                 key={i}
-                className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#121212] border border-[#D4AF37]/25 text-xs text-[#E8E8E8] font-medium hover:border-[#D4AF37] hover:text-[#FFD700] transition-colors"
+                className="flex items-center gap-1.5 sm:gap-2 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#121212] border border-[#D4AF37]/25 text-[0.7rem] sm:text-xs text-[#E8E8E8] font-medium hover:border-[#D4AF37] hover:text-[#FFD700] transition-colors"
               >
-                <Icon className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0" />
-                <span>{b.text}</span>
+                <Icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D4AF37] flex-shrink-0" />
+                <span className="whitespace-nowrap">{b.text}</span>
               </div>
             );
           })}
