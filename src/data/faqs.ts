@@ -9,7 +9,7 @@ export const FAQS_DATA: FaqItem[] = [
   {
     id: '2',
     question: 'How does booking and payment work?',
-    answer: 'Booking is immediate and seamless through WhatsApp (+20 1107871007). No upfront deposit or advance credit card is required for most day trips. You simply pay on the day of the tour in EUR, USD, GBP, or Egyptian Pounds (EGP).'
+    answer: 'Booking is immediate and seamless through WhatsApp (+20 1025221269). No upfront deposit or advance credit card is required for most day trips. You simply pay on the day of the tour in EUR, USD, GBP, or Egyptian Pounds (EGP).'
   },
   {
     id: '3',

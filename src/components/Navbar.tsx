@@ -137,7 +137,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             {/* WhatsApp CTA (Desktop) */}
             <a
-              href="https://wa.me/201107871007?text=Hello%20EGY%20TOURS!%20I%20would%20like%20to%20inquire%20about%20your%20trips."
+              href="https://wa.me/201025221269?text=Hello%20EGY%20TOURS!%20I%20would%20like%20to%20inquire%20about%20your%20trips."
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:from-[#2ae06f] hover:to-[#179e8e] text-white font-bold text-xs uppercase tracking-wider rounded-full shadow-lg shadow-emerald-950/40 transition-transform duration-200 hover:scale-105"
@@ -202,7 +202,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
 
             <a
-              href="https://wa.me/201107871007?text=Hello%20EGY%20TOURS!%20I%20would%20like%20to%20inquire%20about%20your%20trips."
+              href="https://wa.me/201025221269?text=Hello%20EGY%20TOURS!%20I%20would%20like%20to%20inquire%20about%20your%20trips."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-emerald-900/30 to-teal-900/40 border border-[#25D366]/50 shadow-lg text-white"
@@ -218,18 +218,18 @@ export const Navbar: React.FC<NavbarProps> = ({
                       Online
                     </span>
                   </div>
-                  <div className="text-xs text-zinc-400">+20 1107871007 (Instant Reply)</div>
+                  <div className="text-xs text-zinc-400">+20 1025221269 (Instant Reply)</div>
                 </div>
               </div>
               <span className="text-emerald-400 font-bold text-lg">→</span>
             </a>
 
             <a
-              href="tel:+201107871007"
+              href="tel:+201025221269"
               className="flex items-center justify-center gap-2 py-2.5 rounded-full border border-white/10 text-xs font-semibold text-zinc-300 hover:text-white transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span>Direct Call: +20 1107871007</span>
+              <span>Direct Call: +20 1025221269</span>
             </a>
           </div>
         </div>

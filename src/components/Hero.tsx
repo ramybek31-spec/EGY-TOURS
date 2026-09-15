@@ -170,7 +170,7 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenIntro }) => {
     }));
   };
 
-  const whatsappBookingUrl = `https://wa.me/201107871007?text=${encodeURIComponent(
+  const whatsappBookingUrl = `https://wa.me/201025221269?text=${encodeURIComponent(
     currentSlide.whatsappPrompt
   )}`;
 

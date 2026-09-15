@@ -131,8 +131,8 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
             <Phone className="w-5 h-5 text-[#D4AF37]" />
             <div className="text-left">
               <div className="text-xs text-zinc-400">24/7 Telephone & Booking</div>
-              <a href="tel:+201107871007" className="text-xs font-bold text-[#FFD700] hover:underline">
-                +20 1107871007
+              <a href="tel:+201025221269" className="text-xs font-bold text-[#FFD700] hover:underline">
+                +20 1025221269
               </a>
             </div>
           </div>

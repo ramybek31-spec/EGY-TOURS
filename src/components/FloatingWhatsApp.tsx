@@ -24,7 +24,7 @@ declare global {
 }
 
 const WHATSAPP_URL =
-  'https://wa.me/201107871007?text=Hello%20EGY%20TOURS!%20I%20would%20like%20to%20inquire%20about%20your%20tours.';
+  'https://wa.me/201025221269?text=Hello%20EGY%20TOURS!%20I%20would%20like%20to%20inquire%20about%20your%20tours.';
 
 const ICON_SEQUENCE = [
   {
@@ -800,7 +800,7 @@ export const FloatingWhatsApp: React.FC = () => {
                 Scan with phone camera
               </p>
               <p className="text-[0.68rem] text-[#D4AF37] font-mono tracking-wider mt-0.5 font-semibold">
-                +20 110 787 1007
+                +20 102 522 1269
               </p>
             </motion.div>
 

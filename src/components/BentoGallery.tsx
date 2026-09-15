@@ -145,7 +145,7 @@ export const BentoGallery: React.FC<BentoGalleryProps> = ({ currentLang }) => {
             <span>{t('explore_trips')}</span>
           </a>
           <a
-            href="https://wa.me/201107871007?text=Hello%20EGY%20TOURS!%20I%20saw%20your%20gallery%20and%20would%20like%20to%20book%20a%20tour."
+            href="https://wa.me/201025221269?text=Hello%20EGY%20TOURS!%20I%20saw%20your%20gallery%20and%20would%20like%20to%20book%20a%20tour."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline-gold w-full sm:w-auto justify-center"

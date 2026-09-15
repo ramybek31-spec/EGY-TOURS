@@ -42,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
             {/* Social Icons */}
             <div className="flex items-center gap-3">
               <a
-                href="https://wa.me/201107871007"
+                href="https://wa.me/201025221269"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-[#161616] border border-white/10 hover:border-[#25D366] hover:text-[#25D366] flex items-center justify-center text-zinc-300 transition-colors"
@@ -178,8 +178,8 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
                 <Phone className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="text-[0.68rem] text-zinc-500">24/7 Phone & WhatsApp</div>
-                  <a href="tel:+201107871007" className="text-white hover:text-[#FFD700] font-semibold">
-                    +20 1107871007
+                  <a href="tel:+201025221269" className="text-white hover:text-[#FFD700] font-semibold">
+                    +20 1025221269
                   </a>
                 </div>
               </li>
@@ -217,7 +217,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
               <span
                 id="romero-studios-credit"
                 className="text-[#D4AF37] font-bold cursor-pointer hover:text-white transition-colors underline decoration-[#D4AF37]/40 hover:decoration-white underline-offset-2"
-                title="Phone: +201224278490 | +201107871007"
+                title="Phone: +201224278490 | +201025221269"
                 tabIndex={0}
                 aria-haspopup="dialog"
                 aria-label="ROMERO'S STUDIOS - View contact phone numbers"
@@ -255,7 +255,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
                   </a>
 
                   <a
-                    href="tel:+201107871007"
+                    href="tel:+201025221269"
                     className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg bg-black/50 hover:bg-[#D4AF37]/15 border border-white/10 hover:border-[#D4AF37]/60 text-zinc-200 hover:text-[#FFD700] transition-colors group/item"
                   >
                     <div className="p-1 rounded-md bg-[#D4AF37]/20 text-[#D4AF37] group-hover/item:text-[#FFD700]">
@@ -264,7 +264,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
                     <div className="flex flex-col">
                       <span className="text-[0.62rem] text-zinc-400">Phone & WhatsApp</span>
                       <span className="text-xs font-mono font-bold tracking-wide text-white group-hover/item:text-[#FFD700]">
-                        +20 110 787 1007
+                        +20 102 522 1269
                       </span>
                     </div>
                   </a>

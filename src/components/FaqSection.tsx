@@ -71,7 +71,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ currentLang }) => {
           <h4 className="text-xs sm:text-sm font-bold text-white mb-1">Have a specific question or custom request?</h4>
           <p className="text-xs text-zinc-400 mb-4">Our multilingual operations team is online 24/7 on WhatsApp to help with bookings, group discounts, and custom private charters.</p>
           <a
-            href="https://wa.me/201107871007?text=Hello%20EGY%20TOURS!%20I%20have%20a%20question%20about%20your%20excursions."
+            href="https://wa.me/201025221269?text=Hello%20EGY%20TOURS!%20I%20have%20a%20question%20about%20your%20excursions."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold text-xs py-2 px-6 inline-flex"

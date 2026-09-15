@@ -252,7 +252,7 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
 
                         <div className="relative group/book">
                           <a
-                            href={`https://wa.me/201107871007?text=${encodeURIComponent(
+                            href={`https://wa.me/201025221269?text=${encodeURIComponent(
                               `Hello EGY TOURS! I would like to book ${trip.title} from your website.`
                             )}`}
                             target="_blank"

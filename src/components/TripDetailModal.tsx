@@ -89,7 +89,7 @@ export const TripDetailModal: React.FC<TripDetailModalProps> = ({
       `💰 Est. Total: *${currentPrice.symbol}${totalPrice.toLocaleString()} ${currency}*\n\n` +
       `Please confirm availability and pickup time!`
     );
-    window.open(`https://wa.me/201107871007?text=${message}`, '_blank');
+    window.open(`https://wa.me/201025221269?text=${message}`, '_blank');
   };
 
   return (

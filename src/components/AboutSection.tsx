@@ -65,7 +65,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
               </a>
 
               <a
-                href="https://wa.me/201107871007?text=Hello%20EGY%20TOURS!%20I%20have%20a%20question%20about%20your%20services."
+                href="https://wa.me/201025221269?text=Hello%20EGY%20TOURS!%20I%20have%20a%20question%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 text-zinc-300 hover:text-white hover:border-[#25D366] text-xs font-semibold transition-all"
