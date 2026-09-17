@@ -57,6 +57,13 @@ export interface MapPoint {
   lng: number;
   description: string;
   tripId?: string;
+  image?: string;
+  distance?: string;
+  transitTime?: string;
+  depthOrTerrain?: string;
+  highlights?: string[];
+  chartX?: number; // 0-100 percentage on regional map
+  chartY?: number; // 0-100 percentage on regional map
 }
 
 export interface FaqItem {

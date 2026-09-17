@@ -10,9 +10,9 @@ export const TRIPS_DATA: Trip[] = [
     badge: 'Popular',
     shortDesc: 'Paradise on earth! Relax under iconic orange parasols in turquoise lagoons. Snorkeling & buffet lunch included.',
     fullDesc: 'Escape to the world-famous Orange Bay on Giftun Island. Renowned for its powdery white sands, shallow turquoise lagoon, and signature orange umbrellas, this tour offers the quintessential Red Sea day. Sail on a luxury yacht, snorkel at vibrant coral reefs, and savor a freshly prepared onboard open-buffet lunch.',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80'
@@ -226,11 +226,12 @@ export const TRIPS_DATA: Trip[] = [
     badge: 'Top Rated',
     shortDesc: 'PADI-certified scuba diving for beginners. Explore Red Sea coral gardens with 1-on-1 expert guidance.',
     fullDesc: 'Hurghada possesses some of the warmest, clearest waters on the planet with visibility often exceeding 30 meters. This introductory scuba experience requires no previous certification. Your personal PADI instructor guides you 1-on-1 underwater up to 7-10 meters depth, making you feel completely secure as you glide through coral pinnacles.',
-    image: 'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1544552866-d3ed42536cfd?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1570481662006-a3a1374699e8?auto=format&fit=crop&w=800&q=80'
     ],
     rating: 5.0,
     reviewsCount: 310,

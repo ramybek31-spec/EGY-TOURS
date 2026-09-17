@@ -7,7 +7,14 @@ export const MAP_POINTS: MapPoint[] = [
     type: 'marina',
     lat: 27.2228,
     lng: 33.8423,
-    description: 'EGY TOURS departure pier, luxury yachts dock, and briefing lounge.'
+    description: 'EGY TOURS central departure pier, private yacht moorings, and luxury guest lounge.',
+    image: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=800&q=80',
+    distance: 'Base Hub (0 NM)',
+    transitTime: 'Departure Pier',
+    depthOrTerrain: 'Harbor Basin (8m)',
+    highlights: ['Air-conditioned reception lounge', 'Direct boarding onto luxury yachts', '24/7 security & safety briefing deck'],
+    chartX: 38,
+    chartY: 48
   },
   {
     id: 'orange-bay',
@@ -15,8 +22,15 @@ export const MAP_POINTS: MapPoint[] = [
     type: 'island',
     lat: 27.1895,
     lng: 33.9185,
-    description: 'Turquoise shallow waters, wooden piers, and iconic sun parasols.',
-    tripId: 'orange-bay'
+    description: 'Turquoise shallow lagoons, wooden boardwalks, overwater swings, and iconic orange sunshades.',
+    tripId: 'orange-bay',
+    image: 'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=800&q=80',
+    distance: '4.8 NM (8.9 km) ESE',
+    transitTime: '45 min yacht cruise',
+    depthOrTerrain: 'Shallow Sandbar (1.2m)',
+    highlights: ['Powdery white sand lagoon', 'Wooden overwater swings', 'Beach restaurants & bar'],
+    chartX: 62,
+    chartY: 54
   },
   {
     id: 'paradise-island',
@@ -24,8 +38,15 @@ export const MAP_POINTS: MapPoint[] = [
     type: 'island',
     lat: 27.1950,
     lng: 33.9050,
-    description: 'Egyptian Maldives with fine white coral sands and beach restaurant.',
-    tripId: 'paradise-island'
+    description: 'Egyptian Maldives with fine white coral sands, turquoise shallows, and beachfront dining.',
+    tripId: 'paradise-island',
+    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
+    distance: '4.2 NM (7.8 km) ESE',
+    transitTime: '40 min yacht cruise',
+    depthOrTerrain: 'Coral Sand Bank (1.5m)',
+    highlights: ['Crystal lagoon waters', 'Full island buffet service', 'Live oriental shows on beach'],
+    chartX: 58,
+    chartY: 57
   },
   {
     id: 'dolphin-house',
@@ -33,8 +54,15 @@ export const MAP_POINTS: MapPoint[] = [
     type: 'reef',
     lat: 27.3850,
     lng: 33.7800,
-    description: 'Natural horseshoe coral reef where wild spinner dolphin pods congregate.',
-    tripId: 'dolphin-house'
+    description: 'Protected horseshoe coral reef where wild spinner dolphin pods congregate and swim freely.',
+    tripId: 'dolphin-house',
+    image: 'https://images.unsplash.com/photo-1570700276685-6e5454659f8a?auto=format&fit=crop&w=800&q=80',
+    distance: '10.5 NM (19.4 km) NNW',
+    transitTime: '75 min yacht cruise',
+    depthOrTerrain: 'Coral Wall (6 - 15m)',
+    highlights: ['Swimming with free dolphins', '95% sighting rate', 'Vibrant coral reef plateau'],
+    chartX: 46,
+    chartY: 22
   },
   {
     id: 'abu-ramada',
@@ -42,8 +70,15 @@ export const MAP_POINTS: MapPoint[] = [
     type: 'reef',
     lat: 27.1620,
     lng: 33.9850,
-    description: 'Spectacular underwater coral drop-offs teeming with clownfish, rays, and sea turtles.',
-    tripId: 'diving'
+    description: 'Famed diving paradise with towering coral pinnacles, stingrays, sea turtles, and clownfish.',
+    tripId: 'diving',
+    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
+    distance: '8.5 NM (15.7 km) SE',
+    transitTime: '55 min yacht cruise',
+    depthOrTerrain: 'Pinnacle Drop-off (12 - 30m)',
+    highlights: ['World-class coral visibility 30m+', 'Sea turtles & eagle rays', 'Beginner to advanced diving'],
+    chartX: 74,
+    chartY: 68
   },
   {
     id: 'desert-base',
@@ -51,8 +86,15 @@ export const MAP_POINTS: MapPoint[] = [
     type: 'desert',
     lat: 27.1400,
     lng: 33.6800,
-    description: 'ATV quad bike tracks, spider buggies, camel trails, and Bedouin evening tents.',
-    tripId: 'super-safari'
+    description: 'ATV quad bike tracks, desert dunes, spider buggies, and Bedouin evening dinner under the stars.',
+    tripId: 'super-safari',
+    image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80',
+    distance: '15 km WSW (Inland)',
+    transitTime: '25 min 4x4 transfer',
+    depthOrTerrain: 'Canyon & Dunes (280m alt)',
+    highlights: ['25 km ATV quad desert track', 'Traditional Bedouin tea & dinner', 'Stargazing with telescopes'],
+    chartX: 20,
+    chartY: 62
   },
   {
     id: 'luxor-karnak',
@@ -60,8 +102,15 @@ export const MAP_POINTS: MapPoint[] = [
     type: 'city',
     lat: 25.7188,
     lng: 32.6573,
-    description: 'The monumental heart of Ancient Egypt along the Nile Valley.',
-    tripId: 'luxor'
+    description: 'The open-air archaeological capital of the world along the Nile River with Karnak & royal tombs.',
+    tripId: 'luxor',
+    image: 'https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=800&q=80',
+    distance: '280 km SW (Nile Valley)',
+    transitTime: '3.5 hrs VIP coach',
+    depthOrTerrain: 'Nile Valley Basin',
+    highlights: ['Karnak 134 stone pillars', 'Valley of the Kings royal tombs', 'Felucca sail across the Nile'],
+    chartX: 14,
+    chartY: 88
   },
   {
     id: 'cairo-pyramids',
@@ -69,7 +118,14 @@ export const MAP_POINTS: MapPoint[] = [
     type: 'city',
     lat: 29.9792,
     lng: 31.1342,
-    description: 'The Great Pyramid of Khufu, Sphinx, and the grand Egyptian Museum.',
-    tripId: 'pyramids'
+    description: 'The monumental Great Pyramid of Khufu, the Sphinx, and the Grand Egyptian Museum treasures.',
+    tripId: 'pyramids',
+    image: 'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80',
+    distance: '450 km NW (Giza Plateau)',
+    transitTime: '55 min flight / 5 hrs VIP coach',
+    depthOrTerrain: 'Giza Plateau',
+    highlights: ['Great Pyramid of Giza', 'The Great Sphinx', 'Treasures of King Tutankhamun'],
+    chartX: 14,
+    chartY: 14
   }
 ];
