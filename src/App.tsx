@@ -15,6 +15,7 @@ import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { FloatingWidgets } from './components/FloatingWidgets';
+import { BackgroundMusic } from './components/BackgroundMusic';
 import { CinematicIntro } from './components/CinematicIntro';
 import { detectVisitorLanguage } from './utils/whatsapp';
 
@@ -133,9 +134,10 @@ export default function App() {
       {/* Footer */}
       <Footer currentLang={currentLang} />
 
-      {/* Floating Action Buttons */}
+      {/* Floating Action Buttons & Background Music */}
       <FloatingWhatsApp currentLang={currentLang} />
       <FloatingWidgets />
+      <BackgroundMusic isIntroOpen={isIntroOpen} />
 
       {/* 4K Cinematic Intro Experience */}
       <CinematicIntro isOpen={isIntroOpen} onClose={handleCloseIntro} />
