@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Globe, MessageCircle, Film } from 'lucide-react';
 import { CurrencyCode } from '../types';
 import { SupportedLanguage, SUPPORTED_LANGUAGES, TRANSLATIONS } from '../data/translations';
+import { getWhatsAppAutoUrl } from '../utils/whatsapp';
 import egytoursLogo from '../assets/images/egytours_logo_1789090112855.jpg';
 
 interface NavbarProps {
@@ -36,8 +37,10 @@ export const Navbar: React.FC<NavbarProps> = ({
   const navLinks = [
     { label: t('nav_home'), href: '#hero' },
     { label: t('nav_trips'), href: '#trips' },
+    { label: t('nav_map'), href: '#map-section' },
     { label: t('nav_gallery'), href: '#gallery' },
-    { label: t('nav_reviews'), href: '#reviews' }
+    { label: t('nav_reviews'), href: '#reviews' },
+    { label: t('nav_faq'), href: '#faq' }
   ];
 
   return (
@@ -137,7 +140,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             {/* WhatsApp CTA (Desktop) */}
             <a
-              href="https://wa.me/201025221269?text=Hello%20EGY%20TOURS!%20I%20would%20like%20to%20inquire%20about%20your%20trips."
+              href={getWhatsAppAutoUrl(currentLang)}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:from-[#2ae06f] hover:to-[#179e8e] text-white font-bold text-xs uppercase tracking-wider rounded-full shadow-lg shadow-emerald-950/40 transition-transform duration-200 hover:scale-105"
@@ -202,7 +205,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
 
             <a
-              href="https://wa.me/201025221269?text=Hello%20EGY%20TOURS!%20I%20would%20like%20to%20inquire%20about%20your%20trips."
+              href={getWhatsAppAutoUrl(currentLang)}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-emerald-900/30 to-teal-900/40 border border-[#25D366]/50 shadow-lg text-white"

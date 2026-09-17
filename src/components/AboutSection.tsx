@@ -1,6 +1,7 @@
 import React from 'react';
 import { Check, ShieldCheck, HeartHandshake, Sparkles, MessageCircle } from 'lucide-react';
 import { SupportedLanguage, TRANSLATIONS } from '../data/translations';
+import { getWhatsAppAutoUrl } from '../utils/whatsapp';
 
 interface AboutSectionProps {
   currentLang: SupportedLanguage;
@@ -19,7 +20,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
   ];
 
   return (
-    <section id="about-strip" className="py-14 sm:py-20 bg-gradient-to-b from-[#0a0a0a] via-[#101010] to-[#0a0a0a] border-b border-[#D4AF37]/15 relative">
+    <section id="about-strip" className="py-14 sm:py-20 bg-gradient-to-b from-[#0a0a0a] via-[#101010] to-[#0a0a0a] border-b border-[#D4AF37]/15 relative scroll-mt-16">
+      <div id="about-section" className="absolute -top-24 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Text & Features */}
@@ -47,7 +49,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-1">{feat.title}</h4>
+                    <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-1">{feat.title}</h3>
                     <p className="text-xs text-zinc-400 leading-normal">{feat.desc}</p>
                   </div>
                 </div>
@@ -65,7 +67,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
               </a>
 
               <a
-                href="https://wa.me/201025221269?text=Hello%20EGY%20TOURS!%20I%20have%20a%20question%20about%20your%20services."
+                href={getWhatsAppAutoUrl(currentLang, 'question')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 text-zinc-300 hover:text-white hover:border-[#25D366] text-xs font-semibold transition-all"

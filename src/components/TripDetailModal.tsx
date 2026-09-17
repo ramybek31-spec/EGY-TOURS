@@ -13,19 +13,23 @@ import {
   Facebook
 } from 'lucide-react';
 import { Trip, CurrencyCode } from '../types';
+import { SupportedLanguage } from '../data/translations';
+import { buildWhatsAppUrl, getDetailedBookingMessage } from '../utils/whatsapp';
 
 interface TripDetailModalProps {
   trip: Trip | null;
   onClose: () => void;
   currency: CurrencyCode;
   convertPrice: (eur: number) => { formatted: string; amount: number; symbol: string };
+  currentLang?: SupportedLanguage;
 }
 
 export const TripDetailModal: React.FC<TripDetailModalProps> = ({
   trip,
   onClose,
   currency,
-  convertPrice
+  convertPrice,
+  currentLang = 'en'
 }) => {
   if (!trip) return null;
 
@@ -45,7 +49,7 @@ export const TripDetailModal: React.FC<TripDetailModalProps> = ({
   const allImages = [trip.image, ...(trip.galleryImages || [])];
   const activeImage = allImages[activeImgIndex] || trip.image;
 
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://egytours.com';
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://www.egy-tour.com';
 
   const handleShareTrip = async (e?: React.MouseEvent) => {
     if (e) {
@@ -79,17 +83,15 @@ export const TripDetailModal: React.FC<TripDetailModalProps> = ({
   };
 
   const handleWhatsAppBook = () => {
-    const message = encodeURIComponent(
-      `Hello EGY TOURS! 🐪✨\n\n` +
-      `I would like to book:\n` +
-      `📌 *${trip.title}*\n` +
-      `👥 Guests: *${guestsCount}*\n` +
-      `📅 Date: *${selectedDate}*\n` +
-      `🏨 Hotel: *${hotelName || 'To be specified'}*\n` +
-      `💰 Est. Total: *${currentPrice.symbol}${totalPrice.toLocaleString()} ${currency}*\n\n` +
-      `Please confirm availability and pickup time!`
-    );
-    window.open(`https://wa.me/201025221269?text=${message}`, '_blank');
+    const formattedPrice = `${currentPrice.symbol}${totalPrice.toLocaleString()} ${currency}`;
+    const message = getDetailedBookingMessage(currentLang, {
+      tourTitle: trip.title,
+      guestsCount,
+      selectedDate,
+      hotelName,
+      formattedPrice
+    });
+    window.open(buildWhatsAppUrl(message), '_blank');
   };
 
   return (
@@ -212,7 +214,11 @@ export const TripDetailModal: React.FC<TripDetailModalProps> = ({
                       activeImgIndex === idx ? 'border-[#D4AF37] scale-105 shadow-md' : 'border-transparent opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <img src={img} alt="thumbnail" className="w-full h-full object-cover" />
+                    <img
+                      src={img}
+                      alt={`${trip.title} gallery preview ${idx + 1}`}
+                      className="w-full h-full object-cover"
+                    />
                   </button>
                 ))}
               </div>

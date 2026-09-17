@@ -82,9 +82,9 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
 
           {/* Col 2: Quick Links */}
           <div>
-            <h4 className="font-heading text-sm font-bold text-[#FFD700] uppercase tracking-wider mb-4">
+            <h3 className="font-heading text-sm font-bold text-[#FFD700] uppercase tracking-wider mb-4">
               {t('quick_links')}
-            </h4>
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a href="#hero" className="hover:text-[#FFD700] transition-colors">
@@ -126,9 +126,9 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
 
           {/* Col 3: Top Trips */}
           <div>
-            <h4 className="font-heading text-sm font-bold text-[#FFD700] uppercase tracking-wider mb-4">
+            <h3 className="font-heading text-sm font-bold text-[#FFD700] uppercase tracking-wider mb-4">
               {t('top_trips')}
-            </h4>
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a href="#trips" className="hover:text-[#FFD700] transition-colors">
@@ -170,9 +170,9 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
 
           {/* Col 4: Contact Info */}
           <div>
-            <h4 className="font-heading text-sm font-bold text-[#FFD700] uppercase tracking-wider mb-4">
+            <h3 className="font-heading text-sm font-bold text-[#FFD700] uppercase tracking-wider mb-4">
               {t('contact_us')}
-            </h4>
+            </h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
@@ -188,8 +188,8 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
                 <Mail className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="text-[0.68rem] text-zinc-500">Official Inquiries</div>
-                  <a href="mailto:info@egytours.com" className="text-white hover:text-[#FFD700] block">
-                    info@egytours.com
+                  <a href="mailto:info@egy-tour.com" className="text-white hover:text-[#FFD700] block">
+                    info@egy-tour.com
                   </a>
                 </div>
               </li>

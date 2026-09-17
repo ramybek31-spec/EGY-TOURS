@@ -16,7 +16,8 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({ currentLang }) =
     : REVIEWS_DATA.filter((r) => r.platform === activePlatformFilter);
 
   return (
-    <section id="reviews" className="py-14 sm:py-20 bg-[#070707] border-t border-[#D4AF37]/15 relative overflow-hidden">
+    <section id="reviews" className="py-14 sm:py-20 bg-[#070707] border-t border-[#D4AF37]/15 relative overflow-hidden scroll-mt-16">
+      <div id="reviews-section" className="absolute -top-24 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           <h2 className="section-title">{t('reviews_title')}</h2>
@@ -109,7 +110,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({ currentLang }) =
                     {rev.avatarText || rev.author.slice(0, 2).toUpperCase()}
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-white">{rev.author}</h4>
+                    <h3 className="text-xs font-bold text-white">{rev.author}</h3>
                     <p className="text-[0.7rem] text-zinc-400 flex items-center gap-1">
                       <span>{rev.flag}</span>
                       <span>{rev.country}</span>

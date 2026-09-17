@@ -15,6 +15,7 @@ import { Trip, TripCategory, CurrencyCode } from '../types';
 import { TRIPS_DATA } from '../data/trips';
 import { SupportedLanguage, TRANSLATIONS } from '../data/translations';
 import { TripDetailModal } from './TripDetailModal';
+import { buildWhatsAppUrl, getTourInquiryMessage } from '../utils/whatsapp';
 
 interface TripsSectionProps {
   currentLang: SupportedLanguage;
@@ -40,7 +41,7 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
     e.preventDefault();
     e.stopPropagation();
 
-    const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://egytours.com';
+    const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://www.egy-tour.com';
     const shareData = {
       title: `${trip.title} - EGY TOURS Egypt`,
       text: `Book ${trip.title} (${formattedPrice}) with EGY TOURS. VIP service, instant WhatsApp confirmation, 0% advance deposit!`,
@@ -90,7 +91,8 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
   }, [selectedCat, searchQuery]);
 
   return (
-    <section id="trips" className="py-14 sm:py-20 bg-[#0a0a0a] relative">
+    <section id="trips" className="py-14 sm:py-20 bg-[#0a0a0a] relative scroll-mt-16">
+      <div id="trips-section" className="absolute -top-24 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
@@ -252,9 +254,7 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
 
                         <div className="relative group/book">
                           <a
-                            href={`https://wa.me/201025221269?text=${encodeURIComponent(
-                              `Hello EGY TOURS! I would like to book ${trip.title} from your website.`
-                            )}`}
+                            href={buildWhatsAppUrl(getTourInquiryMessage(currentLang, trip.title))}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="py-2 px-3 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold transition-all flex items-center justify-center gap-1 shadow-md shadow-emerald-950/40 w-full"
@@ -287,7 +287,7 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
                           <a
                             href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
                               `Check out this excursion in Egypt: ${trip.title} (${priceInfo.formatted}) - ${trip.shortDesc}\n${
-                                typeof window !== 'undefined' ? window.location.href : 'https://egytours.com'
+                                typeof window !== 'undefined' ? window.location.href : 'https://www.egy-tour.com'
                               }`
                             )}`}
                             target="_blank"
@@ -304,7 +304,7 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
                           {/* Facebook Share Button */}
                           <a
                             href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                              typeof window !== 'undefined' ? window.location.href : 'https://egytours.com'
+                              typeof window !== 'undefined' ? window.location.href : 'https://www.egy-tour.com'
                             )}&quote=${encodeURIComponent(
                               `Check out ${trip.title} with EGY TOURS - VIP Excursions in Egypt!`
                             )}`}
@@ -350,6 +350,7 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
         onClose={() => setSelectedTrip(null)}
         currency={currency}
         convertPrice={convertPrice}
+        currentLang={currentLang}
       />
     </section>
   );

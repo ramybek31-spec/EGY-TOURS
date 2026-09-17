@@ -16,6 +16,7 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 import { SupportedLanguage, TRANSLATIONS } from '../data/translations';
 import { HERO_SLIDES, HeroSlide } from '../data/heroSlides';
+import { buildWhatsAppUrl, getTourInquiryMessage } from '../utils/whatsapp';
 
 interface HeroProps {
   currentLang: SupportedLanguage;
@@ -170,9 +171,9 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenIntro }) => {
     }));
   };
 
-  const whatsappBookingUrl = `https://wa.me/201025221269?text=${encodeURIComponent(
-    currentSlide.whatsappPrompt
-  )}`;
+  const whatsappBookingUrl = buildWhatsAppUrl(
+    getTourInquiryMessage(currentLang, currentSlide.title)
+  );
 
   return (
     <section

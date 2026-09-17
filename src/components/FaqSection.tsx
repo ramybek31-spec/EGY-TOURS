@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import { FAQS_DATA } from '../data/faqs';
 import { SupportedLanguage, TRANSLATIONS } from '../data/translations';
+import { getWhatsAppAutoUrl } from '../utils/whatsapp';
 
 interface FaqSectionProps {
   currentLang: SupportedLanguage;
@@ -16,7 +17,8 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ currentLang }) => {
   };
 
   return (
-    <section id="faq" className="py-14 sm:py-20 bg-[#0a0a0a] border-t border-[#D4AF37]/15 relative">
+    <section id="faq" className="py-14 sm:py-20 bg-[#0a0a0a] border-t border-[#D4AF37]/15 relative scroll-mt-16">
+      <div id="faq-section" className="absolute -top-24 pointer-events-none" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#FFD700] text-xs font-bold uppercase tracking-wider mb-3">
@@ -68,10 +70,10 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ currentLang }) => {
 
         {/* Support Callout */}
         <div className="mt-8 sm:mt-10 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#141414] via-[#1a170c] to-[#141414] border border-[#D4AF37]/30 text-center">
-          <h4 className="text-xs sm:text-sm font-bold text-white mb-1">Have a specific question or custom request?</h4>
+          <h3 className="text-xs sm:text-sm font-bold text-white mb-1">Have a specific question or custom request?</h3>
           <p className="text-xs text-zinc-400 mb-4">Our multilingual operations team is online 24/7 on WhatsApp to help with bookings, group discounts, and custom private charters.</p>
           <a
-            href="https://wa.me/201025221269?text=Hello%20EGY%20TOURS!%20I%20have%20a%20question%20about%20your%20excursions."
+            href={getWhatsAppAutoUrl(currentLang, 'question')}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold text-xs py-2 px-6 inline-flex"

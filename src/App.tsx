@@ -16,9 +16,10 @@ import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { FloatingWidgets } from './components/FloatingWidgets';
 import { CinematicIntro } from './components/CinematicIntro';
+import { detectVisitorLanguage } from './utils/whatsapp';
 
 export default function App() {
-  const [currentLang, setCurrentLang] = useState<SupportedLanguage>('en');
+  const [currentLang, setCurrentLang] = useState<SupportedLanguage>(() => detectVisitorLanguage());
   const [currentCurrency, setCurrentCurrency] = useState<CurrencyCode>('EUR');
   const [isIntroOpen, setIsIntroOpen] = useState<boolean>(() => {
     try {
@@ -63,12 +64,18 @@ export default function App() {
     };
   };
 
-  // Sync RTL / LTR document direction when language changes
+  // Sync RTL / LTR document direction, page title, and persist preference when language changes
   useEffect(() => {
+    document.title = 'EGY TOURS - Travel & Adventure Egypt';
     const langMeta = SUPPORTED_LANGUAGES.find((l) => l.code === currentLang);
     const dir = langMeta?.dir || 'ltr';
     document.documentElement.dir = dir;
     document.documentElement.lang = currentLang;
+    try {
+      localStorage.setItem('egy_tours_lang', currentLang);
+    } catch {
+      // Storage unavailable
+    }
   }, [currentLang]);
 
   return (
@@ -127,7 +134,7 @@ export default function App() {
       <Footer currentLang={currentLang} />
 
       {/* Floating Action Buttons */}
-      <FloatingWhatsApp />
+      <FloatingWhatsApp currentLang={currentLang} />
       <FloatingWidgets />
 
       {/* 4K Cinematic Intro Experience */}

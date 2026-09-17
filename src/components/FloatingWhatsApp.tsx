@@ -15,6 +15,8 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import QRCode from 'qrcode';
+import { SupportedLanguage } from '../data/translations';
+import { getWhatsAppAutoUrl, WHATSAPP_SHARE_TEXT } from '../utils/whatsapp';
 
 declare global {
   interface Window {
@@ -22,9 +24,6 @@ declare global {
     dataLayer?: unknown[];
   }
 }
-
-const WHATSAPP_URL =
-  'https://wa.me/201025221269?text=Hello%20EGY%20TOURS!%20I%20would%20like%20to%20inquire%20about%20your%20tours.';
 
 const ICON_SEQUENCE = [
   {
@@ -57,7 +56,57 @@ const ICON_SEQUENCE = [
   }
 ];
 
-export const FloatingWhatsApp: React.FC = () => {
+const LOCALIZED_SEQUENCE_META: Record<
+  string,
+  Record<SupportedLanguage, { label: string; badgeText: string; sublabel: string }>
+> = {
+  whatsapp: {
+    en: { label: 'Chat on WhatsApp', badgeText: 'Need help?', sublabel: 'Online 24/7' },
+    ar: { label: 'محادثة عبر واتساب', badgeText: 'تحتاج مساعدة؟', sublabel: 'متواجدون 24/7' },
+    ru: { label: 'Чат в WhatsApp', badgeText: 'Нужна помощь?', sublabel: 'Онлайн 24/7' },
+    de: { label: 'Auf WhatsApp chatten', badgeText: 'Hilfe nötig?', sublabel: 'Online 24/7' },
+    fr: { label: 'Discuter sur WhatsApp', badgeText: "Besoin d'aide ?", sublabel: 'En ligne 24/7' },
+    pl: { label: 'Czat na WhatsApp', badgeText: 'Potrzebujesz pomocy?', sublabel: 'Dostępni 24/7' },
+    it: { label: 'Chatta su WhatsApp', badgeText: 'Serve aiuto?', sublabel: 'Online 24/7' },
+    es: { label: 'Chatear por WhatsApp', badgeText: '¿Necesitas ayuda?', sublabel: 'En línea 24/7' }
+  },
+  quickbook: {
+    en: { label: 'Quick Book Tour', badgeText: 'Quick Book', sublabel: 'Instant Confirmation' },
+    ar: { label: 'حجز سريع للرحلات', badgeText: 'حجز سريع', sublabel: 'تأكيد فوري' },
+    ru: { label: 'Быстрое бронирование', badgeText: 'Быстрый заказ', sublabel: 'Мгновенно' },
+    de: { label: 'Schnellbuchung', badgeText: 'Schnellbuchung', sublabel: 'Sofortige Bestätigung' },
+    fr: { label: 'Réservation rapide', badgeText: 'Réservation rapide', sublabel: 'Confirmation immédiate' },
+    pl: { label: 'Szybka rezerwacja', badgeText: 'Szybka rezerwacja', sublabel: 'Błyskawiczne potwierdzenie' },
+    it: { label: 'Prenotazione Rapida', badgeText: 'Prenota subito', sublabel: 'Conferma immediata' },
+    es: { label: 'Reserva Rápida', badgeText: 'Reserva rápida', sublabel: 'Confirmación al instante' }
+  },
+  instant: {
+    en: { label: '1-Min WhatsApp Booking', badgeText: 'Fast Reply', sublabel: '0% Deposit Required' },
+    ar: { label: 'حجز خلال دقيقة', badgeText: 'رد فوري', sublabel: '0% دفعة مقدمة' },
+    ru: { label: 'Бронь за 1 минуту', badgeText: 'Быстрый ответ', sublabel: 'Без предоплаты' },
+    de: { label: '1-Min WhatsApp-Buchung', badgeText: 'Schnelle Antwort', sublabel: '0 % Anzahlung' },
+    fr: { label: 'Réservation en 1 min', badgeText: 'Réponse rapide', sublabel: "0% d'acompte requis" },
+    pl: { label: 'Rezerwacja w 1 min', badgeText: 'Szybka odpowiedź', sublabel: '0% zaliczki' },
+    it: { label: 'Prenota in 1 minuto', badgeText: 'Risposta rapida', sublabel: '0% di anticipo' },
+    es: { label: 'Reserva en 1 min', badgeText: 'Respuesta rápida', sublabel: '0% de anticipo' }
+  },
+  concierge: {
+    en: { label: 'Tour Concierge', badgeText: 'Need help?', sublabel: 'Hurghada Red Sea' },
+    ar: { label: 'مستشار الرحلات', badgeText: 'تحتاج مساعدة؟', sublabel: 'الغردقة البحر الأحمر' },
+    ru: { label: 'Консьерж туров', badgeText: 'Нужна помощь?', sublabel: 'Хургада, Красное море' },
+    de: { label: 'Ausflugs-Concierge', badgeText: 'Hilfe nötig?', sublabel: 'Hurghada Rotes Meer' },
+    fr: { label: 'Concierge excursions', badgeText: "Besoin d'aide ?", sublabel: 'Hurghada Mer Rouge' },
+    pl: { label: 'Konsjerż wycieczek', badgeText: 'Potrzebujesz pomocy?', sublabel: 'Hurghada Morze Czerwone' },
+    it: { label: 'Concierge Tour', badgeText: 'Serve aiuto?', sublabel: 'Hurghada Mar Rosso' },
+    es: { label: 'Conserje de Tours', badgeText: '¿Necesitas ayuda?', sublabel: 'Hurghada Mar Rojo' }
+  }
+};
+
+interface FloatingWhatsAppProps {
+  currentLang?: SupportedLanguage;
+}
+
+export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ currentLang = 'en' }) => {
   const [isAutoExpanded, setIsAutoExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
@@ -92,7 +141,18 @@ export const FloatingWhatsApp: React.FC = () => {
   // Inactivity cooldown period (2.5 seconds of user pause after crossing 25% scroll)
   const INACTIVITY_COOLDOWN_MS = 2500;
 
-  const activeSeq = ICON_SEQUENCE[iconSeqIndex];
+  const rawSeq = ICON_SEQUENCE[iconSeqIndex];
+  const langKey = (currentLang || 'en') as SupportedLanguage;
+  const localizedMeta =
+    LOCALIZED_SEQUENCE_META[rawSeq.id]?.[langKey] || LOCALIZED_SEQUENCE_META[rawSeq.id]?.en;
+  const activeSeq = {
+    ...rawSeq,
+    label: localizedMeta?.label || rawSeq.label,
+    badgeText: localizedMeta?.badgeText || rawSeq.badgeText,
+    sublabel: localizedMeta?.sublabel || rawSeq.sublabel
+  };
+
+  const whatsappUrl = getWhatsAppAutoUrl(langKey);
 
   // Animate Icon Sequence continuously
   useEffect(() => {
@@ -102,20 +162,20 @@ export const FloatingWhatsApp: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Pre-generate high-res QR code data URL once on mount
+  // Pre-generate high-res QR code data URL dynamically when language/url changes
   useEffect(() => {
-    QRCode.toDataURL(WHATSAPP_URL, {
+    QRCode.toDataURL(whatsappUrl, {
       width: 144,
       margin: 1,
       color: {
         dark: '#032c24', // Deep emerald Egyptian ink
-        light: '#ffffff'  // Pure crisp white backdrop
+        light: '#ffffff' // Pure crisp white backdrop
       },
       errorCorrectionLevel: 'M'
     })
       .then((url) => setQrCodeDataUrl(url))
       .catch((err) => console.warn('QR Code generation skipped:', err));
-  }, []);
+  }, [whatsappUrl]);
 
   // Show "Need help?" label after initial button entrance completes
   useEffect(() => {
@@ -427,7 +487,7 @@ export const FloatingWhatsApp: React.FC = () => {
     e.preventDefault();
     e.stopPropagation();
     setIsSharePending(true);
-    const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://egytours.com';
+    const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://www.egy-tour.com';
     const shareData = {
       title: 'EGY TOURS - VIP Excursions & Travel in Egypt',
       text: 'Book VIP Hurghada & Red Sea excursions with zero advance deposit, instant confirmation, and 24/7 WhatsApp support!',
@@ -547,7 +607,7 @@ export const FloatingWhatsApp: React.FC = () => {
                       {/* Direct WhatsApp Share */}
                       <motion.a
                         href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-                          'Book VIP Hurghada excursions with EGY TOURS (0% deposit, instant WhatsApp booking): ' +
+                          (WHATSAPP_SHARE_TEXT[langKey] || WHATSAPP_SHARE_TEXT.en) +
                             (typeof window !== 'undefined' ? window.location.href : '')
                         )}`}
                         target="_blank"
@@ -613,7 +673,7 @@ export const FloatingWhatsApp: React.FC = () => {
 
               <motion.a
                 id="whatsapp-need-help-label"
-                href={WHATSAPP_URL}
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleClick}
@@ -833,7 +893,7 @@ export const FloatingWhatsApp: React.FC = () => {
 
               <a
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-                  'Book VIP excursions in Egypt with EGY TOURS: ' +
+                  (WHATSAPP_SHARE_TEXT[langKey] || WHATSAPP_SHARE_TEXT.en) +
                     (typeof window !== 'undefined' ? window.location.href : '')
                 )}`}
                 target="_blank"
@@ -952,7 +1012,7 @@ export const FloatingWhatsApp: React.FC = () => {
         className={`animate-whatsapp-entry ${isExpanded ? 'is-expanded' : ''} ${
           isAutoExpanded ? 'auto-expanded' : ''
         } ${isSystemDark ? 'is-dark-mode' : ''}`}
-        href={WHATSAPP_URL}
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         onClick={handleClick}

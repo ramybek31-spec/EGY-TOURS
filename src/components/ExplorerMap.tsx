@@ -318,9 +318,19 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
         </div>
 
         {/* Main Grid: Interactive Map Stage (8 cols) + Locations List / Dossier (4 cols) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Interactive Map Visual Stage (8 cols) */}
-          <div className="lg:col-span-8 rounded-2xl bg-[#0d141e] border-2 border-[#D4AF37]/35 shadow-2xl relative overflow-hidden flex flex-col">
+          <motion.div
+            id="interactive-map-container"
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{
+              duration: 0.75,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="lg:col-span-8 rounded-2xl bg-[#0d141e] border-2 border-[#D4AF37]/35 shadow-2xl relative overflow-hidden flex flex-col h-full min-h-[550px] sm:min-h-[640px] lg:min-h-[820px]"
+          >
             {/* Corner Luxury Nautical Accents */}
             <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#D4AF37] z-20 pointer-events-none" />
             <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#D4AF37] z-20 pointer-events-none" />
@@ -383,7 +393,7 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
               ref={mapStageRef}
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
-              className="relative w-full h-[380px] sm:h-[480px] overflow-hidden bg-[#070e17]"
+              className="relative w-full h-[550px] sm:h-[640px] lg:h-full lg:min-h-[820px] flex-1 overflow-hidden bg-[#070e17]"
             >
               {viewMode === 'nautical' ? (
                 /* ================= NAUTICAL VECTOR RADAR CHART VIEW ================= */
@@ -557,10 +567,10 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
                         position: 'absolute',
                         left: `${marinaBase.chartX || 38}%`,
                         top: `${marinaBase.chartY || 48}%`,
-                        width: '280px',
-                        height: '280px',
-                        marginLeft: '-140px',
-                        marginTop: '-140px',
+                        width: '380px',
+                        height: '380px',
+                        marginLeft: '-190px',
+                        marginTop: '-190px',
                         pointerEvents: 'none',
                         transformOrigin: 'center center',
                       }}
@@ -700,7 +710,9 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
               {/* Floating Active Point Pill Overlay with Parallax Motion */}
               <motion.div
                 style={{ y: cardParallaxY }}
-                className="absolute top-3 left-3 sm:top-4 sm:left-4 p-3 sm:p-4 rounded-xl bg-black/90 backdrop-blur-md border border-[#D4AF37]/50 max-w-[calc(100%-4.5rem)] sm:max-w-xs shadow-2xl z-30 select-none will-change-transform"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                className="absolute top-3 left-3 sm:top-4 sm:left-4 p-3 sm:p-4 rounded-xl bg-black/90 backdrop-blur-md border border-[#D4AF37]/50 max-w-[calc(100%-4.5rem)] sm:max-w-xs shadow-2xl z-30 select-none will-change-transform cursor-pointer"
               >
                 <div className="flex items-center justify-between gap-2 mb-1.5">
                   <div className="flex items-center gap-1.5">
@@ -743,12 +755,22 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
                 </button>
               </motion.div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Location Explorer Sidebar & Active Dossier (4 cols) */}
-          <div className="lg:col-span-4 flex flex-col gap-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{
+              duration: 0.75,
+              delay: 0.12,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="lg:col-span-4 flex flex-col gap-4 h-full"
+          >
             {/* Active Destination Dossier Card */}
-            <div className="rounded-2xl bg-[#111923] border-2 border-[#D4AF37]/40 shadow-xl overflow-hidden">
+            <div className="rounded-2xl bg-[#111923] border-2 border-[#D4AF37]/40 shadow-xl overflow-hidden flex-shrink-0">
               {activePoint.image && (
                 <div className="relative w-full h-36 overflow-hidden">
                   <img
@@ -826,7 +848,7 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
             </div>
 
             {/* Quick Destination Directory List */}
-            <div className="p-3 sm:p-4 rounded-2xl bg-[#101722] border border-white/10">
+            <div className="p-3 sm:p-4 rounded-2xl bg-[#101722] border border-white/10 flex-1 flex flex-col">
               <div className="flex items-center justify-between mb-3 px-1">
                 <h4 className="text-xs font-bold text-[#FFD700] uppercase tracking-wider flex items-center gap-1.5">
                   <Navigation className="w-3.5 h-3.5" />
@@ -835,7 +857,7 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
                 <span className="text-[0.65rem] text-zinc-400 font-mono">{filteredPoints.length} spots</span>
               </div>
 
-              <div className="space-y-2 max-h-[260px] overflow-y-auto pr-1 custom-scrollbar">
+              <div className="space-y-2 max-h-[300px] overflow-y-auto pr-1 custom-scrollbar">
                 {filteredPoints.map(pt => {
                   const isSelected = activePoint.id === pt.id;
                   const isHovered = hoveredPoint?.id === pt.id;
@@ -879,7 +901,7 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
                 })}
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Global HQ Office & Logistics Footer Strip */}
