@@ -692,7 +692,7 @@ export const ExplorerMap: React.FC<ExplorerMapProps> = ({ currentLang }) => {
                 /* ================= LIVE OPENSTREETMAP SATELLITE / EMBED VIEW ================= */
                 <div className="w-full h-full relative">
                   <iframe
-                    title="EGY TOURS Hurghada Red Sea Live Map"
+                    title="EGY TOUR Hurghada Red Sea Live Map"
                     src={`https://www.openstreetmap.org/export/embed.html?bbox=${(activePoint.lng - 0.035).toFixed(4)}%2C${(activePoint.lat - 0.025).toFixed(4)}%2C${(activePoint.lng + 0.035).toFixed(4)}%2C${(activePoint.lat + 0.025).toFixed(4)}&layer=mapnik&marker=${activePoint.lat}%2C${activePoint.lng}`}
                     width="100%"
                     height="100%"

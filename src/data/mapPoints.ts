@@ -7,7 +7,7 @@ export const MAP_POINTS: MapPoint[] = [
     type: 'marina',
     lat: 27.2228,
     lng: 33.8423,
-    description: 'EGY TOURS central departure pier, private yacht moorings, and luxury guest lounge.',
+    description: 'EGY TOUR central departure pier, private yacht moorings, and luxury guest lounge.',
     image: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=800&q=80',
     distance: 'Base Hub (0 NM)',
     transitTime: 'Departure Pier',

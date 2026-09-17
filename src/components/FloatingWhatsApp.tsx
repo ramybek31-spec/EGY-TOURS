@@ -489,7 +489,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ currentLang 
     setIsSharePending(true);
     const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://www.egy-tour.com';
     const shareData = {
-      title: 'EGY TOURS - VIP Excursions & Travel in Egypt',
+      title: 'EGY TOUR - VIP Excursions & Travel in Egypt',
       text: 'Book VIP Hurghada & Red Sea excursions with zero advance deposit, instant confirmation, and 24/7 WhatsApp support!',
       url: shareUrl
     };
@@ -583,8 +583,8 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ currentLang 
                         className={`tooltip-share-btn flex-1 py-1.5 px-2 rounded-lg bg-gradient-to-r from-[#D4AF37]/25 via-[#FFD700]/20 to-[#D4AF37]/25 hover:from-[#D4AF37]/45 hover:to-[#FFD700]/35 border border-[#D4AF37]/80 hover:border-[#FFD700] text-white text-[0.68rem] font-bold flex items-center justify-center gap-1.5 cursor-pointer shadow-sm hover:scale-[1.03] ${
                           isSharePending ? 'is-pending' : ''
                         } ${isInitialLoad ? 'initial-pulse' : ''}`}
-                        title="Share EGY TOURS booking link via mobile share menu or copy"
-                        aria-label="Share EGY TOURS booking link"
+                        title="Share EGY TOUR booking link via mobile share menu or copy"
+                        aria-label="Share EGY TOUR booking link"
                       >
                         {isSharePending ? (
                           <>
@@ -1027,7 +1027,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ currentLang 
           setIsFocused(false);
         }}
         onTouchStart={() => handleUserInteraction(false)}
-        aria-label="Chat on WhatsApp with EGY TOURS"
+        aria-label="Chat on WhatsApp with EGY TOUR"
         title="Chat with Tour Manager on WhatsApp"
       >
         <div className="w-[60px] h-[60px] flex items-center justify-center flex-shrink-0 relative">

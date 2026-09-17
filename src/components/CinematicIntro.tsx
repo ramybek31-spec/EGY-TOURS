@@ -53,7 +53,7 @@ const CHAPTERS: Chapter[] = [
   {
     id: 3,
     tag: 'EGYPT’S PREMIER TOUR OPERATOR',
-    title: 'EGY TOURS',
+    title: 'EGY TOUR',
     subtitle: 'Crafting unforgettable memories across land, sea, and ancient millennia',
     location: 'HURGHADA • CAIRO • LUXOR • MARSA ALAM',
     image: 'https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=2000&q=85',
@@ -311,7 +311,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ isOpen, onClose 
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="fixed inset-0 z-[99999] bg-[#050505] text-white overflow-hidden flex flex-col justify-between select-none"
         role="dialog"
-        aria-label="EGY TOURS Cinematic Experience"
+        aria-label="EGY TOUR Cinematic Experience"
       >
         {/* Anamorphic Widescreen Cinema Letterbox: Top Bar */}
         <motion.div
@@ -325,14 +325,14 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ isOpen, onClose 
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#D4AF37] p-0.5 bg-[#121212] flex items-center justify-center overflow-hidden shadow-[0_0_12px_rgba(212,175,55,0.4)]">
               <img
                 src={egytoursLogo}
-                alt="EGY TOURS"
+                alt="EGY TOUR"
                 className="w-full h-full object-cover rounded-full"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div>
               <span className="font-heading text-sm sm:text-base font-bold tracking-wider bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-white bg-clip-text text-transparent">
-                EGY TOURS
+                EGY TOUR
               </span>
               <span className="hidden sm:block text-[0.6rem] text-zinc-400 tracking-[0.2em] uppercase font-mono">
                 CINEMATIC SHOWCASE • 4K
@@ -459,7 +459,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ isOpen, onClose 
                     <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full border-4 border-[#FFD700] p-1 bg-[#141414] shadow-[0_0_40px_rgba(212,175,55,0.7)] flex items-center justify-center overflow-hidden">
                       <img
                         src={egytoursLogo}
-                        alt="EGY TOURS Official Emblem"
+                        alt="EGY TOUR Official Emblem"
                         className="w-full h-full object-cover rounded-full"
                         referrerPolicy="no-referrer"
                       />
@@ -472,7 +472,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ isOpen, onClose 
                       WELCOME TO THE ADVENTURE
                     </span>
                     <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl font-black tracking-wider bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-white bg-clip-text text-transparent drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
-                      EGY TOURS
+                      EGY TOUR
                     </h1>
                   </div>
 
@@ -570,7 +570,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ isOpen, onClose 
                         ? 'Red Sea'
                         : ch.id === 2
                         ? 'Sahara'
-                        : 'EGY TOURS'}
+                        : 'EGY TOUR'}
                     </span>
                   </button>
                 );

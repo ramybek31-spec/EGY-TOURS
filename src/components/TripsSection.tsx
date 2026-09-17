@@ -43,8 +43,8 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
 
     const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://www.egy-tour.com';
     const shareData = {
-      title: `${trip.title} - EGY TOURS Egypt`,
-      text: `Book ${trip.title} (${formattedPrice}) with EGY TOURS. VIP service, instant WhatsApp confirmation, 0% advance deposit!`,
+      title: `${trip.title} - EGY TOUR Egypt`,
+      text: `Book ${trip.title} (${formattedPrice}) with EGY TOUR. VIP service, instant WhatsApp confirmation, 0% advance deposit!`,
       url: shareUrl
     };
 
@@ -306,7 +306,7 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
                             href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
                               typeof window !== 'undefined' ? window.location.href : 'https://www.egy-tour.com'
                             )}&quote=${encodeURIComponent(
-                              `Check out ${trip.title} with EGY TOURS - VIP Excursions in Egypt!`
+                              `Check out ${trip.title} with EGY TOUR - VIP Excursions in Egypt!`
                             )}`}
                             target="_blank"
                             rel="noopener noreferrer"

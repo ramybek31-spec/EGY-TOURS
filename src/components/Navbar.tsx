@@ -58,14 +58,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#D4AF37] p-0.5 bg-[#141414] shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 group-hover:border-[#FFD700] flex-shrink-0">
               <img
                 src={egytoursLogo}
-                alt="EGY TOURS Logo"
+                alt="EGY TOUR Logo"
                 className="w-full h-full object-cover rounded-full"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div className="flex flex-col min-w-0">
               <span className="font-heading text-base sm:text-xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#E8E8E8] bg-clip-text text-transparent tracking-wider leading-tight truncate">
-                EGY TOURS
+                EGY TOUR
               </span>
               <span className="hidden xs:inline text-[0.55rem] sm:text-[0.6rem] text-[#C0C0C0] tracking-[0.12em] sm:tracking-[0.18em] uppercase font-semibold truncate">
                 TRAVEL & ADVENTURE • EGYPT

@@ -66,7 +66,7 @@ export default function App() {
 
   // Sync RTL / LTR document direction, page title, and persist preference when language changes
   useEffect(() => {
-    document.title = 'EGY TOURS - Travel & Adventure Egypt';
+    document.title = 'EGY TOUR - Travel & Adventure Egypt';
     const langMeta = SUPPORTED_LANGUAGES.find((l) => l.code === currentLang);
     const dir = langMeta?.dir || 'ltr';
     document.documentElement.dir = dir;

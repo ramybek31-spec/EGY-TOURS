@@ -287,14 +287,19 @@ export const BentoGallery: React.FC<BentoGalleryProps> = ({ currentLang }) => {
     return () => clearInterval(timer);
   }, [isAutoPlayEnabled, isHovered, filteredItems.length, handleNext, currentIndex]);
 
-  // Center active thumbnail in filmstrip
+  // Center active thumbnail in filmstrip (container-only, never scrolls the window)
   useEffect(() => {
     const activeThumb = thumbnailRefs.current[safeIndex];
-    if (activeThumb && thumbnailContainerRef.current) {
-      activeThumb.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center'
+    const container = thumbnailContainerRef.current;
+    if (activeThumb && container) {
+      const containerWidth = container.clientWidth;
+      const thumbLeft = activeThumb.offsetLeft;
+      const thumbWidth = activeThumb.offsetWidth;
+      const targetScrollLeft = thumbLeft - containerWidth / 2 + thumbWidth / 2;
+
+      container.scrollTo({
+        left: Math.max(0, targetScrollLeft),
+        behavior: 'smooth'
       });
     }
   }, [safeIndex]);

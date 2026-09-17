@@ -26,7 +26,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     accentColor: '#D4AF37',
     fallbackUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=85',
     description: 'Ancient Egyptian royalty meets Red Sea underwater observation deck. Luxury pharaonic statues, gold carvings, and air-conditioned sub-sea lounge.',
-    whatsappPrompt: 'Hello EGY TOURS! I would like to inquire about booking the Nefertari Royal VIP Lounge cruise.'
+    whatsappPrompt: 'Hello EGY TOUR! I would like to inquire about booking the Nefertari Royal VIP Lounge cruise.'
   },
   {
     id: 'vip-speedboat',
@@ -40,7 +40,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     accentColor: '#5ce1e6',
     fallbackUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=85',
     description: 'Custom private speed boat with sunshade canopy, luxury seating, and agile access to secluded sandbanks and shallow reefs.',
-    whatsappPrompt: 'Hello EGY TOURS! I want to book a Private VIP Speedboat tour for my group.'
+    whatsappPrompt: 'Hello EGY TOUR! I want to book a Private VIP Speedboat tour for my group.'
   },
   {
     id: 'paradise-island',
@@ -54,7 +54,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     accentColor: '#F59E0B',
     fallbackUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85',
     description: 'Hurghada’s world-famous beach haven. Bask under the sun, unwind in handwoven hammocks, and take memorable photos.',
-    whatsappPrompt: 'Hello EGY TOURS! I would love to visit Paradise Island with hotel pickup.'
+    whatsappPrompt: 'Hello EGY TOUR! I would love to visit Paradise Island with hotel pickup.'
   },
   {
     id: 'pyramids-giza',
@@ -68,7 +68,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     accentColor: '#D4AF37',
     fallbackUrl: 'https://images.unsplash.com/photo-1503177112294-7de59fb45731?auto=format&fit=crop&w=2000&q=85',
     description: 'Day tour from Hurghada to Cairo in executive Mercedes transport. Explore the Great Pyramid of Khufu, Sphinx, and the Grand Egyptian Museum.',
-    whatsappPrompt: 'Hello EGY TOURS! I want to book the Day Tour to the Giza Pyramids and Sphinx.'
+    whatsappPrompt: 'Hello EGY TOUR! I want to book the Day Tour to the Giza Pyramids and Sphinx.'
   },
   {
     id: 'bianka-serenity',
@@ -82,7 +82,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     accentColor: '#38BDF8',
     fallbackUrl: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=85',
     description: 'Woven bamboo sunbeds, artisan mocktails, chilled lounge music, and swimming in shallow turquoise waters.',
-    whatsappPrompt: 'Hello EGY TOURS! Please send details and booking info for Bianka Island.'
+    whatsappPrompt: 'Hello EGY TOUR! Please send details and booking info for Bianka Island.'
   },
   {
     id: 'dolphin-safari',
@@ -96,7 +96,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     accentColor: '#0EA5E9',
     fallbackUrl: 'https://images.unsplash.com/photo-1570700276685-6e5454659f8a?auto=format&fit=crop&w=2000&q=85',
     description: 'An unforgettable encounter with spinner and bottlenose dolphins in their natural marine sanctuary with certified guides.',
-    whatsappPrompt: 'Hello EGY TOURS! I would like to book the Dolphin House Snorkeling trip.'
+    whatsappPrompt: 'Hello EGY TOUR! I would like to book the Dolphin House Snorkeling trip.'
   },
   {
     id: 'bianka-carriage',
@@ -110,7 +110,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     accentColor: '#F472B6',
     fallbackUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85',
     description: 'Iconic ornate carriage installation perched directly on the shoreline, perfect for honeymoons, couples, and instagram memories.',
-    whatsappPrompt: 'Hello EGY TOURS! I would love to visit the photo spots on Bianka Island.'
+    whatsappPrompt: 'Hello EGY TOUR! I would love to visit the photo spots on Bianka Island.'
   },
   {
     id: 'super-quad-safari',
@@ -124,7 +124,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     accentColor: '#FB923C',
     fallbackUrl: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=2000&q=85',
     description: 'Convoy across golden sands, conquer desert mountain tracks, visit an authentic Bedouin camp, and enjoy hot herbal tea at sunset.',
-    whatsappPrompt: 'Hello EGY TOURS! I want to book the Super Quad Desert Safari with Bedouin dinner.'
+    whatsappPrompt: 'Hello EGY TOUR! I want to book the Super Quad Desert Safari with Bedouin dinner.'
   },
   {
     id: 'cleopatra-spa',
@@ -138,7 +138,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     accentColor: '#A855F7',
     fallbackUrl: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=85',
     description: 'Traditional Turkish and Moroccan ritual with heated marble slabs, cleansing black soap scrub, sauna, steam room, and full-body massage.',
-    whatsappPrompt: 'Hello EGY TOURS! I would like to book a VIP Cleopatra Hammam & Spa session.'
+    whatsappPrompt: 'Hello EGY TOUR! I would like to book a VIP Cleopatra Hammam & Spa session.'
   },
   {
     id: 'bianka-hammock',
@@ -152,12 +152,12 @@ export const HERO_SLIDES: HeroSlide[] = [
     accentColor: '#2DD4BF',
     fallbackUrl: 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=2000&q=85',
     description: 'Relax in open-air woven hammocks suspended above the crystal waters as warm sea breezes blow across the lagoon.',
-    whatsappPrompt: 'Hello EGY TOURS! I want to reserve a day pass to Bianka Island hammocks.'
+    whatsappPrompt: 'Hello EGY TOUR! I want to reserve a day pass to Bianka Island hammocks.'
   },
   {
     id: 'vip-bus-fleet',
     fileName: 'EGY-TOURS-VIP-Bus-Mockup.jpg',
-    title: 'EGY TOURS VIP Coach Fleet',
+    title: 'EGY TOUR VIP Coach Fleet',
     subtitle: 'First-class Mercedes touring coaches with luxury recliners, onboard Wi-Fi & hostess',
     category: 'Luxury Transportation',
     highlight: '🚌 5-Star Mercedes Executive Coach',
@@ -166,6 +166,6 @@ export const HERO_SLIDES: HeroSlide[] = [
     accentColor: '#D4AF37',
     fallbackUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=2000&q=85',
     description: 'Our proprietary deep-blue VIP Mercedes coaches feature reclining leather seats, individual USB power, air-conditioning, and dedicated tour hostesses.',
-    whatsappPrompt: 'Hello EGY TOURS! I am inquiring about your VIP bus excursions to Cairo & Luxor.'
+    whatsappPrompt: 'Hello EGY TOUR! I am inquiring about your VIP bus excursions to Cairo & Luxor.'
   }
 ];

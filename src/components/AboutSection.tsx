@@ -32,7 +32,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
             </div>
 
             <h2 className="font-heading text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
-              Why Choose <span className="bg-gradient-to-r from-[#D4AF37] to-[#FFD700] bg-clip-text text-transparent">EGY TOURS</span>?
+              Why Choose <span className="bg-gradient-to-r from-[#D4AF37] to-[#FFD700] bg-clip-text text-transparent">EGY TOUR</span>?
             </h2>
 
             <div className="w-20 h-1 bg-gradient-to-r from-[#D4AF37] to-transparent rounded mb-5" />

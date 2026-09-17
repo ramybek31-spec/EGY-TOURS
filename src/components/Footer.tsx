@@ -20,14 +20,14 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
               <div className="w-12 h-12 rounded-full border-2 border-[#D4AF37] p-0.5 bg-[#141414] shadow-[0_0_12px_rgba(212,175,55,0.3)] flex items-center justify-center overflow-hidden">
                 <img
                   src={egytoursLogo}
-                  alt="EGY TOURS Logo"
+                  alt="EGY TOUR Logo"
                   className="w-full h-full object-cover rounded-full"
                   referrerPolicy="no-referrer"
                 />
               </div>
               <div>
                 <span className="font-heading text-lg font-bold bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-white bg-clip-text text-transparent block">
-                  EGY TOURS
+                  EGY TOUR
                 </span>
                 <span className="text-[0.55rem] text-[#C0C0C0] tracking-[0.18em] uppercase font-semibold">
                   TRAVEL & ADVENTURE • EGYPT
@@ -208,7 +208,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
         {/* Bottom Bar: Copyright & Designer Credit */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="text-zinc-500 text-[0.75rem]">
-            &copy; {new Date().getFullYear()} <span className="text-[#FFD700] font-bold">EGY TOURS</span>. All rights reserved. | Egypt
+            &copy; {new Date().getFullYear()} <span className="text-[#FFD700] font-bold">EGY TOUR</span>. All rights reserved. | Egypt
           </p>
 
           <div className="text-[0.7rem] text-zinc-400">

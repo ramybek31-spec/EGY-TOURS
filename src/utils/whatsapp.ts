@@ -35,56 +35,56 @@ export function detectVisitorLanguage(): SupportedLanguage {
  * Multilingual general greetings for initial WhatsApp chat initiation
  */
 export const WHATSAPP_GREETINGS: Record<SupportedLanguage, string> = {
-  en: 'Hello EGY TOURS! I would like to inquire about your Hurghada tours and excursions.',
+  en: 'Hello EGY TOUR! I would like to inquire about your Hurghada tours and excursions.',
   ar: 'مرحباً إيجي تورز! أود الاستفسار عن رحلاتكم وجولاتكم السياحية في الغردقة.',
-  ru: 'Здравствуйте, EGY TOURS! Я хочу узнать подробнее об экскурсиях в Хургаде.',
-  de: 'Hallo EGY TOURS! Ich möchte mich über Ihre Ausflüge und Touren in Hurghada informieren.',
-  fr: 'Bonjour EGY TOURS ! Je souhaiterais me renseigner sur vos excursions à Hurghada.',
-  pl: 'Dzień dobry EGY TOURS! Chciałbym zapytać o wycieczki w Hurghadzie.',
-  it: 'Ciao EGY TOURS! Vorrei avere informazioni sulle vostre escursioni a Hurghada.',
-  es: '¡Hola EGY TOURS! Me gustaría consultar sobre sus excursiones y tours en Hurghada.'
+  ru: 'Здравствуйте, EGY TOUR! Я хочу узнать подробнее об экскурсиях в Хургаде.',
+  de: 'Hallo EGY TOUR! Ich möchte mich über Ihre Ausflüge und Touren in Hurghada informieren.',
+  fr: 'Bonjour EGY TOUR ! Je souhaiterais me renseigner sur vos excursions à Hurghada.',
+  pl: 'Dzień dobry EGY TOUR! Chciałbym zapytać o wycieczki w Hurghadzie.',
+  it: 'Ciao EGY TOUR! Vorrei avere informazioni sulle vostre escursioni a Hurghada.',
+  es: '¡Hola EGY TOUR! Me gustaría consultar sobre sus excursiones y tours en Hurghada.'
 };
 
 /**
  * Multilingual gallery inquiry greetings
  */
 export const WHATSAPP_GALLERY_GREETINGS: Record<SupportedLanguage, string> = {
-  en: 'Hello EGY TOURS! I saw your photo gallery and would like to inquire about booking a tour.',
+  en: 'Hello EGY TOUR! I saw your photo gallery and would like to inquire about booking a tour.',
   ar: 'مرحباً إيجي تورز! لقد شاهدت معرض الصور وأود الاستفسار عن حجز رحلة.',
-  ru: 'Здравствуйте, EGY TOURS! Я посмотрел вашу фотогалерею и хочу забронировать тур.',
-  de: 'Hallo EGY TOURS! Ich habe Ihre Fotogalerie gesehen und möchte einen Ausflug buchen.',
-  fr: "Bonjour EGY TOURS ! J'ai vu votre galerie photos et je souhaiterais réserver une excursion.",
-  pl: 'Dzień dobry EGY TOURS! Zobaczyłem galerię zdjęć i chciałbym zarezerwować wycieczkę.',
-  it: 'Ciao EGY TOURS! Ho visto la vostra galleria fotografica e vorrei prenotare un tour.',
-  es: '¡Hola EGY TOURS! He visto su galería de fotos y me gustaría reservar una excursión.'
+  ru: 'Здравствуйте, EGY TOUR! Я посмотрел вашу фотогалерею и хочу забронировать тур.',
+  de: 'Hallo EGY TOUR! Ich habe Ihre Fotogalerie gesehen und möchte einen Ausflug buchen.',
+  fr: "Bonjour EGY TOUR ! J'ai vu votre galerie photos et je souhaiterais réserver une excursion.",
+  pl: 'Dzień dobry EGY TOUR! Zobaczyłem galerię zdjęć i chciałbym zarezerwować wycieczkę.',
+  it: 'Ciao EGY TOUR! Ho visto la vostra galleria fotografica e vorrei prenotare un tour.',
+  es: '¡Hola EGY TOUR! He visto su galería de fotos y me gustaría reservar una excursión.'
 };
 
 /**
  * Multilingual question / FAQ support greetings
  */
 export const WHATSAPP_QUESTION_GREETINGS: Record<SupportedLanguage, string> = {
-  en: 'Hello EGY TOURS! I have a question regarding your excursions and custom services.',
+  en: 'Hello EGY TOUR! I have a question regarding your excursions and custom services.',
   ar: 'مرحباً إيجي تورز! لدي استفسار بخصوص رحلاتكم وخدماتكم الخاصة.',
-  ru: 'Здравствуйте, EGY TOURS! У меня есть вопрос по поводу ваших экскурсий и услуг.',
-  de: 'Hallo EGY TOURS! Ich habe eine Frage zu Ihren Ausflügen und individuellen Angeboten.',
-  fr: "Bonjour EGY TOURS ! J'ai une question concernant vos excursions et vos services sur mesure.",
-  pl: 'Dzień dobry EGY TOURS! Mam pytanie odnośnie Waszych wycieczek i usług na zamówienie.',
-  it: 'Ciao EGY TOURS! Ho una domanda riguardo alle vostre escursioni e servizi su misura.',
-  es: '¡Hola EGY TOURS! Tengo una consulta sobre sus excursiones y servicios personalizados.'
+  ru: 'Здравствуйте, EGY TOUR! У меня есть вопрос по поводу ваших экскурсий и услуг.',
+  de: 'Hallo EGY TOUR! Ich habe eine Frage zu Ihren Ausflügen und individuellen Angeboten.',
+  fr: "Bonjour EGY TOUR ! J'ai une question concernant vos excursions et vos services sur mesure.",
+  pl: 'Dzień dobry EGY TOUR! Mam pytanie odnośnie Waszych wycieczek i usług na zamówienie.',
+  it: 'Ciao EGY TOUR! Ho una domanda riguardo alle vostre escursioni e servizi su misura.',
+  es: '¡Hola EGY TOUR! Tengo una consulta sobre sus excursiones y servicios personalizados.'
 };
 
 /**
  * Multilingual website recommendation share text
  */
 export const WHATSAPP_SHARE_TEXT: Record<SupportedLanguage, string> = {
-  en: 'Book VIP Hurghada & Red Sea excursions with EGY TOURS (0% deposit, instant WhatsApp booking): ',
+  en: 'Book VIP Hurghada & Red Sea excursions with EGY TOUR (0% deposit, instant WhatsApp booking): ',
   ar: 'احجز أفضل رحلات الغردقة والبحر الأحمر مع إيجي تورز (بدون دفعة مقدمة وتأكيد فوري عبر واتساب): ',
-  ru: 'Забронируйте VIP-экскурсии в Хургаде с EGY TOURS (0% предоплаты, мгновенное подтверждение в WhatsApp): ',
-  de: 'VIP-Ausflüge in Hurghada & Rotes Meer mit EGY TOURS buchen (0 % Anzahlung, sofortige WhatsApp-Bestätigung): ',
-  fr: 'Réservez des excursions VIP à Hurghada avec EGY TOURS (0% d\'acompte, confirmation immédiate par WhatsApp) : ',
-  pl: 'Zarezerwuj wycieczki VIP w Hurghadzie z EGY TOURS (0% zaliczki, natychmiastowe potwierdzenie na WhatsApp): ',
-  it: 'Prenota escursioni VIP a Hurghada con EGY TOURS (0% anticipo, conferma immediata su WhatsApp): ',
-  es: 'Reserva excursiones VIP en Hurghada con EGY TOURS (0% de anticipo, confirmación inmediata por WhatsApp): '
+  ru: 'Забронируйте VIP-экскурсии в Хургаде с EGY TOUR (0% предоплаты, мгновенное подтверждение в WhatsApp): ',
+  de: 'VIP-Ausflüge in Hurghada & Rotes Meer mit EGY TOUR buchen (0 % Anzahlung, sofortige WhatsApp-Bestätigung): ',
+  fr: 'Réservez des excursions VIP à Hurghada avec EGY TOUR (0% d\'acompte, confirmation immédiate par WhatsApp) : ',
+  pl: 'Zarezerwuj wycieczki VIP w Hurghadzie z EGY TOUR (0% zaliczki, natychmiastowe potwierdzenie na WhatsApp): ',
+  it: 'Prenota escursioni VIP a Hurghada con EGY TOUR (0% anticipo, conferma immediata su WhatsApp): ',
+  es: 'Reserva excursiones VIP en Hurghada con EGY TOUR (0% de anticipo, confirmación inmediata por WhatsApp): '
 };
 
 /**
@@ -125,20 +125,20 @@ export function getTourInquiryMessage(
     case 'ar':
       return `مرحباً إيجي تورز! أود الاستفسار عن حجز رحلة *${tourTitle}* عبر موقعكم. برجاء إفادتي بالتوافر والتفاصيل.`;
     case 'ru':
-      return `Здравствуйте, EGY TOURS! Я хочу забронировать экскурсию *${tourTitle}* с вашего сайта. Пожалуйста, подскажите детали и доступность.`;
+      return `Здравствуйте, EGY TOUR! Я хочу забронировать экскурсию *${tourTitle}* с вашего сайта. Пожалуйста, подскажите детали и доступность.`;
     case 'de':
-      return `Hallo EGY TOURS! Ich möchte den Ausflug *${tourTitle}* über Ihre Website buchen. Bitte teilen Sie mir Verfügbarkeit und Details mit.`;
+      return `Hallo EGY TOUR! Ich möchte den Ausflug *${tourTitle}* über Ihre Website buchen. Bitte teilen Sie mir Verfügbarkeit und Details mit.`;
     case 'fr':
-      return `Bonjour EGY TOURS ! Je souhaite réserver l'excursion *${tourTitle}* depuis votre site web. Merci de me confirmer les disponibilités.`;
+      return `Bonjour EGY TOUR ! Je souhaite réserver l'excursion *${tourTitle}* depuis votre site web. Merci de me confirmer les disponibilités.`;
     case 'pl':
-      return `Dzień dobry EGY TOURS! Chciałbym zarezerwować wycieczkę *${tourTitle}* przez Waszą stronę internetową. Proszę o potwierdzenie dostępności.`;
+      return `Dzień dobry EGY TOUR! Chciałbym zarezerwować wycieczkę *${tourTitle}* przez Waszą stronę internetową. Proszę o potwierdzenie dostępności.`;
     case 'it':
-      return `Ciao EGY TOURS! Vorrei prenotare l'escursione *${tourTitle}* dal vostro sito web. Per favore confermatemi dettagli e disponibilità.`;
+      return `Ciao EGY TOUR! Vorrei prenotare l'escursione *${tourTitle}* dal vostro sito web. Per favore confermatemi dettagli e disponibilità.`;
     case 'es':
-      return `¡Hola EGY TOURS! Me gustaría reservar la excursión *${tourTitle}* desde su sitio web. Por favor confírmenme disponibilidad y detalles.`;
+      return `¡Hola EGY TOUR! Me gustaría reservar la excursión *${tourTitle}* desde su sitio web. Por favor confírmenme disponibilidad y detalles.`;
     case 'en':
     default:
-      return `Hello EGY TOURS! I would like to book *${tourTitle}* from your website. Please let me know availability and details.`;
+      return `Hello EGY TOUR! I would like to book *${tourTitle}* from your website. Please let me know availability and details.`;
   }
 }
 
@@ -190,7 +190,7 @@ export function getDetailedBookingMessage(
       );
     case 'ru':
       return (
-        `Здравствуйте, EGY TOURS! 🐪✨\n\n` +
+        `Здравствуйте, EGY TOUR! 🐪✨\n\n` +
         `Я хочу забронировать:\n` +
         `📌 *${tourTitle}*\n` +
         `👥 Количество гостей: *${guestsCount}*\n` +
@@ -201,7 +201,7 @@ export function getDetailedBookingMessage(
       );
     case 'de':
       return (
-        `Hallo EGY TOURS! 🐪✨\n\n` +
+        `Hallo EGY TOUR! 🐪✨\n\n` +
         `Ich möchte gerne buchen:\n` +
         `📌 *${tourTitle}*\n` +
         `👥 Personen: *${guestsCount}*\n` +
@@ -212,7 +212,7 @@ export function getDetailedBookingMessage(
       );
     case 'fr':
       return (
-        `Bonjour EGY TOURS ! 🐪✨\n\n` +
+        `Bonjour EGY TOUR ! 🐪✨\n\n` +
         `Je souhaite réserver :\n` +
         `📌 *${tourTitle}*\n` +
         `👥 Participants : *${guestsCount}*\n` +
@@ -223,7 +223,7 @@ export function getDetailedBookingMessage(
       );
     case 'pl':
       return (
-        `Dzień dobry EGY TOURS! 🐪✨\n\n` +
+        `Dzień dobry EGY TOUR! 🐪✨\n\n` +
         `Chciałbym zarezerwować:\n` +
         `📌 *${tourTitle}*\n` +
         `👥 Liczba osób: *${guestsCount}*\n` +
@@ -234,7 +234,7 @@ export function getDetailedBookingMessage(
       );
     case 'it':
       return (
-        `Ciao EGY TOURS! 🐪✨\n\n` +
+        `Ciao EGY TOUR! 🐪✨\n\n` +
         `Vorrei prenotare:\n` +
         `📌 *${tourTitle}*\n` +
         `👥 Ospiti: *${guestsCount}*\n` +
@@ -245,7 +245,7 @@ export function getDetailedBookingMessage(
       );
     case 'es':
       return (
-        `¡Hola EGY TOURS! 🐪✨\n\n` +
+        `¡Hola EGY TOUR! 🐪✨\n\n` +
         `Me gustaría reservar:\n` +
         `📌 *${tourTitle}*\n` +
         `👥 Personas: *${guestsCount}*\n` +
@@ -257,7 +257,7 @@ export function getDetailedBookingMessage(
     case 'en':
     default:
       return (
-        `Hello EGY TOURS! 🐪✨\n\n` +
+        `Hello EGY TOUR! 🐪✨\n\n` +
         `I would like to book:\n` +
         `📌 *${tourTitle}*\n` +
         `👥 Guests: *${guestsCount}*\n` +

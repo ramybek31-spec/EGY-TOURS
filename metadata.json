@@ -1,6 +1,6 @@
 {
-  "name": "EGY TOURS",
-  "description": "EGY TOURS - Travel & Adventure in Egypt. Premier Red Sea excursions, desert safaris, pyramids, and cultural day trips.",
+  "name": "EGY TOUR",
+  "description": "EGY TOUR - Travel & Adventure in Egypt. Premier Red Sea excursions, desert safaris, pyramids, and cultural day trips.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

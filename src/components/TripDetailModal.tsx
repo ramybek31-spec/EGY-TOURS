@@ -57,8 +57,8 @@ export const TripDetailModal: React.FC<TripDetailModalProps> = ({
       e.stopPropagation();
     }
     const shareData = {
-      title: `${trip.title} - EGY TOURS Egypt`,
-      text: `Check out ${trip.title} (${currentPrice.formatted}) with EGY TOURS! Instant WhatsApp booking with 0% advance deposit.`,
+      title: `${trip.title} - EGY TOUR Egypt`,
+      text: `Check out ${trip.title} (${currentPrice.formatted}) with EGY TOUR! Instant WhatsApp booking with 0% advance deposit.`,
       url: shareUrl
     };
 
@@ -120,7 +120,7 @@ export const TripDetailModal: React.FC<TripDetailModalProps> = ({
             {/* Share to WhatsApp */}
             <a
               href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-                `Check out ${trip.title} with EGY TOURS (${currentPrice.formatted}): ${trip.shortDesc}\n${shareUrl}`
+                `Check out ${trip.title} with EGY TOUR (${currentPrice.formatted}): ${trip.shortDesc}\n${shareUrl}`
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -136,7 +136,7 @@ export const TripDetailModal: React.FC<TripDetailModalProps> = ({
             <a
               href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
                 shareUrl
-              )}&quote=${encodeURIComponent(`Check out ${trip.title} with EGY TOURS Egypt!`)}`}
+              )}&quote=${encodeURIComponent(`Check out ${trip.title} with EGY TOUR Egypt!`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1877F2]/15 hover:bg-[#1877F2] text-[#1877F2] hover:text-white border border-[#1877F2]/40 text-xs font-bold transition-all shadow-sm"
@@ -412,7 +412,7 @@ export const TripDetailModal: React.FC<TripDetailModalProps> = ({
                 <a
                   href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
                     shareUrl
-                  )}&quote=${encodeURIComponent(`Check out ${trip.title} with EGY TOURS Egypt!`)}`}
+                  )}&quote=${encodeURIComponent(`Check out ${trip.title} with EGY TOUR Egypt!`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1877F2]/20 hover:bg-[#1877F2] text-[#1877F2] hover:text-white border border-[#1877F2]/40 text-xs font-bold transition-all shadow-sm cursor-pointer"
