@@ -195,6 +195,7 @@ export const TripDetailModal: React.FC<TripDetailModalProps> = ({
               <img
                 src={activeImage}
                 alt={trip.title}
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-sm border border-[#D4AF37]/40 text-[#FFD700] text-xs font-bold">
@@ -217,6 +218,7 @@ export const TripDetailModal: React.FC<TripDetailModalProps> = ({
                     <img
                       src={img}
                       alt={`${trip.title} gallery preview ${idx + 1}`}
+                      referrerPolicy="no-referrer"
                       className="w-full h-full object-cover"
                     />
                   </button>

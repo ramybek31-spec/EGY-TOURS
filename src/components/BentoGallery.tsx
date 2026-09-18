@@ -40,7 +40,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Nefertari Glass Submarine',
     location: 'Hurghada Marina',
     description: 'Immerse into deep coral kingdoms and vibrant marine life through panoramic underwater viewing windows.',
-    src: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1600&q=80'
+    src: '/images/nefertari_submarine.jpg'
   },
   {
     id: '2',
@@ -49,7 +49,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Orange Bay Beach Lagoon',
     location: 'Giftun Island',
     description: 'Bask on powdery white sands, wade into crystal-clear turquoise shallows, and unwind in wooden swing bars.',
-    src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80'
+    src: '/images/orange_bay_beach.jpg'
   },
   {
     id: '3',
@@ -58,7 +58,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Great Pyramids of Giza & Sphinx',
     location: 'Giza, Cairo',
     description: 'Stand in awe before 4,500-year-old architectural marvels of the Pharaohs on a seamless private day trip.',
-    src: 'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1600&q=80'
+    src: '/images/giza_pyramids.jpg'
   },
   {
     id: '4',
@@ -94,7 +94,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Karnak Temple Pillars & Kings Valley',
     location: 'Luxor, Upper Egypt',
     description: 'Walk through monumental hypostyle halls with royal hieroglyphs and centuries of royal pharaonic legacy.',
-    src: 'https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=1600&q=80'
+    src: '/images/luxor_karnak_temple.jpg'
   },
   {
     id: '8',
@@ -103,7 +103,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Super Safari Quad Desert Trek',
     location: 'Hurghada Desert Valley',
     description: 'Conquer the rugged desert trails on high-powered ATVs, spider buggies, and watch the desert sunset.',
-    src: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1600&q=80'
+    src: '/images/sahara_super_safari.jpg'
   },
   {
     id: '9',
@@ -139,7 +139,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Golden Hour Desert Vista & Stargazing',
     location: 'Red Sea Mountain Range',
     description: 'Stargaze under crisp desert constellations after an awe-inspiring sunset panoramic overlook.',
-    src: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80'
+    src: '/images/safari_stargazing_egypt.jpg'
   }
 ];
 

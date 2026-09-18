@@ -10,12 +10,11 @@ export const TRIPS_DATA: Trip[] = [
     badge: 'Popular',
     shortDesc: 'Paradise on earth! Relax under iconic orange parasols in turquoise lagoons. Snorkeling & buffet lunch included.',
     fullDesc: 'Escape to the world-famous Orange Bay on Giftun Island. Renowned for its powdery white sands, shallow turquoise lagoon, and signature orange umbrellas, this tour offers the quintessential Red Sea day. Sail on a luxury yacht, snorkel at vibrant coral reefs, and savor a freshly prepared onboard open-buffet lunch.',
-    image: 'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/orange_bay_beach.jpg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80'
+      '/images/orange_bay_beach.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Giftun_island.jpg?width=1600',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Giftun_Island_Egypte_-_panoramio.jpg?width=1600'
     ],
     rating: 4.9,
     reviewsCount: 384,
@@ -57,9 +56,9 @@ export const TRIPS_DATA: Trip[] = [
     badge: 'Top Rated',
     shortDesc: 'Experience paradise at Ozaria Island! This premium excursion takes you to the Red Sea’s most stunning turquoise lagoon.',
     fullDesc: 'Ozaria Island represents the newest standard of luxury island hopping in Hurghada. Enjoy VIP shaded sun loungers, an uncrowded atmosphere, crystal clear waters ideal for swimming and photo shoots, coupled with an elevated dining menu and premium yacht service.',
-    image: 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/ozaria_island_vip.jpg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80',
+      '/images/ozaria_island_vip.jpg',
       'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80'
     ],
@@ -182,10 +181,10 @@ export const TRIPS_DATA: Trip[] = [
     badge: 'Popular',
     shortDesc: 'Quad biking, camel riding, Bedouin village visit, and authentic BBQ dinner under the stars.',
     fullDesc: 'Experience the raw adrenaline and mystic culture of the Eastern Egyptian Desert. Drive your own 250cc ATV quad bike across rolling sand dunes, speed across mountain passes in a spider buggy, ride a camel, visit a secluded Bedouin camp, and feast under starry desert skies with oriental belly dancing and tanoura fire shows.',
-    image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/sahara_super_safari.jpg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
+      '/images/sahara_super_safari.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Desert_Safari_in_hurghada.jpg?width=1600',
       'https://images.unsplash.com/photo-1547234935-80c7145ec969?auto=format&fit=crop&w=800&q=80'
     ],
     rating: 4.9,
@@ -226,9 +225,9 @@ export const TRIPS_DATA: Trip[] = [
     badge: 'Top Rated',
     shortDesc: 'PADI-certified scuba diving for beginners. Explore Red Sea coral gardens with 1-on-1 expert guidance.',
     fullDesc: 'Hurghada possesses some of the warmest, clearest waters on the planet with visibility often exceeding 30 meters. This introductory scuba experience requires no previous certification. Your personal PADI instructor guides you 1-on-1 underwater up to 7-10 meters depth, making you feel completely secure as you glide through coral pinnacles.',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/red_sea_scuba_dive.jpg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
+      '/images/red_sea_scuba_dive.jpg',
       'https://images.unsplash.com/photo-1544552866-d3ed42536cfd?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1570481662006-a3a1374699e8?auto=format&fit=crop&w=800&q=80'
@@ -268,11 +267,11 @@ export const TRIPS_DATA: Trip[] = [
     badge: 'Best Seller',
     shortDesc: 'Visit the Great Pyramids, Sphinx, and Egyptian Museum. Expert Egyptologist guide included.',
     fullDesc: 'Witness the sole surviving Wonder of the Ancient World in person. Travel from Hurghada to Cairo in a deluxe air-conditioned touring bus or private car. Stand before the Great Pyramid of Khufu, look into the eyes of the Great Sphinx of Giza, explore treasures inside the world-renowned Egyptian Museum, and stroll through historic Khan El Khalili bazaar.',
-    image: 'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/giza_pyramids.jpg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=800&q=80'
+      '/images/giza_pyramids.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/All_Gizah_Pyramids.jpg?width=1600',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/The_Giza_Pyramid_Complex.jpg?width=1600'
     ],
     rating: 4.9,
     reviewsCount: 620,
@@ -310,11 +309,11 @@ export const TRIPS_DATA: Trip[] = [
     badge: 'Popular',
     shortDesc: 'Discover the world’s largest open-air museum — Karnak Temple, Valley of the Kings, and the Nile.',
     fullDesc: 'Cross the Nile Valley into ancient Thebes. Luxor holds one third of the world’s greatest antiquities. Walk between the colossal 134 towering stone pillars of Karnak Temple, descend into underground painted tomb chambers of Pharaohs in the Valley of the Kings, behold Queen Hatshepsut’s terraced cliffside temple, and stand before the giant Colossi of Memnon.',
-    image: 'https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/luxor_karnak_temple.jpg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=800&q=80'
+      '/images/luxor_karnak_temple.jpg',
+      '/images/luxor_hatshepsut_temple.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Colossi_of_Memnon,_Luxor,_Egypt.jpg?width=1600'
     ],
     rating: 4.9,
     reviewsCount: 480,
@@ -391,10 +390,11 @@ export const TRIPS_DATA: Trip[] = [
     badge: 'New',
     shortDesc: 'Jeep safari into the Eastern Desert, stargazing with an astronomy guide, Bedouin dinner included.',
     fullDesc: 'Away from the city lights of Hurghada, the Saharan night sky displays an astonishing blanket of millions of stars, constellations, and the Milky Way. Travel by 4x4 into a secluded canyon, view Saturn’s rings and deep-space nebulae through high-powered telescopes guided by an astronomer, and enjoy a candlelit Bedouin dinner.',
-    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/safari_stargazing_egypt.jpg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80'
+      '/images/safari_stargazing_egypt.jpg',
+      '/images/safari_desert_camp.jpg',
+      '/images/sahara_super_safari.jpg'
     ],
     rating: 5.0,
     reviewsCount: 160,
@@ -468,9 +468,9 @@ export const TRIPS_DATA: Trip[] = [
     badge: 'Top Rated',
     shortDesc: 'Underwater sightseeing from a luxury semi-submarine without getting wet. Perfect for families!',
     fullDesc: 'Modeled after ancient pharaonic royalty, the Nefertari features underwater viewing salons with panoramic glass windows 3 meters beneath the water surface. Gaze at vibrant coral gardens, sea turtles, and clownfish in air-conditioned comfort, followed by an optional snorkeling session.',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/nefertari_submarine.jpg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80'
+      '/images/nefertari_submarine.jpg'
     ],
     rating: 4.9,
     reviewsCount: 175,

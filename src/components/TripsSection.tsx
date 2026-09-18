@@ -177,6 +177,7 @@ export const TripsSection: React.FC<TripsSectionProps> = ({
                       src={trip.image}
                       alt={trip.title}
                       loading="lazy"
+                      referrerPolicy="no-referrer"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-90 group-hover:brightness-100"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80" />

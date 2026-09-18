@@ -199,9 +199,9 @@ export const BackgroundMusic: React.FC<BackgroundMusicProps> = ({ isIntroOpen = 
           aria-label={isPlaying ? 'Pause background music' : 'Play background music'}
         >
           {isPlaying ? (
-            <Disc className="w-3.5 h-3.5 sm:w-4 sm:h-4 animate-spin" style={{ animationDuration: '4s' }} />
+            <Disc className="w-4 h-4 animate-spin" style={{ animationDuration: '4s' }} />
           ) : (
-            <Play className="w-3 h-3 sm:w-3.5 sm:h-3.5 ml-0.5 text-zinc-300" />
+            <Play className="w-4 h-4 ml-0.5 text-zinc-300" />
           )}
         </button>
 

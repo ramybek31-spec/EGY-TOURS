@@ -26,7 +26,7 @@ const CHAPTERS: Chapter[] = [
     title: 'THE PYRAMIDS OF GIZA',
     subtitle: 'Where time stands still and eternal pharaohs watch over the golden sands',
     location: 'GIZA PLATEAU • CAIRO, EGYPT',
-    image: 'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=2000&q=85',
+    image: '/images/giza_pyramids.jpg',
     accentColor: '#FFD700',
     quote: '“Man fears Time, yet Time fears the Pyramids.”'
   },
@@ -36,7 +36,7 @@ const CHAPTERS: Chapter[] = [
     title: 'THE VIBRANT RED SEA',
     subtitle: 'Dive into world-famous coral reefs and swim with wild dolphins in crystal lagoons',
     location: 'HURGHADA & ORANGE BAY • RED SEA',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=85',
+    image: '/images/hurghada_red_sea.jpg',
     accentColor: '#38bdf8',
     quote: '“Beneath the azure surface lies a living paradise of coral and light.”'
   },
@@ -46,7 +46,7 @@ const CHAPTERS: Chapter[] = [
     title: 'THE GOLDEN SAHARA',
     subtitle: 'High-octane quad desert safaris, traditional fireside tea, and a billion stars',
     location: 'EASTERN DESERT • SAHARA',
-    image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=2000&q=85',
+    image: '/images/sahara_super_safari.jpg',
     accentColor: '#f59e0b',
     quote: '“In the silence of the desert, the soul finds its rhythm.”'
   },
@@ -56,7 +56,7 @@ const CHAPTERS: Chapter[] = [
     title: 'EGY TOUR',
     subtitle: 'Crafting unforgettable memories across land, sea, and ancient millennia',
     location: 'HURGHADA • CAIRO • LUXOR • MARSA ALAM',
-    image: 'https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=2000&q=85',
+    image: '/images/luxor_hatshepsut_temple.jpg',
     accentColor: '#D4AF37',
     quote: '“Your journey into the heart of timeless Egypt starts now.”'
   }

@@ -82,7 +82,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30 shadow-2xl shadow-black/80 aspect-[4/3] group">
               <img
-                src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=1200&q=80"
+                src="/images/hurghada_red_sea.jpg"
                 alt="Luxury yacht cruising the turquoise waters of Hurghada"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"

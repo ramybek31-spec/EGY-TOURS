@@ -24,7 +24,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     badge: 'Exclusive VIP',
     location: 'Hurghada Red Sea',
     accentColor: '#D4AF37',
-    fallbackUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=85',
+    fallbackUrl: '/images/nefertari_submarine.jpg',
     description: 'Ancient Egyptian royalty meets Red Sea underwater observation deck. Luxury pharaonic statues, gold carvings, and air-conditioned sub-sea lounge.',
     whatsappPrompt: 'Hello EGY TOUR! I would like to inquire about booking the Nefertari Royal VIP Lounge cruise.'
   },
@@ -52,7 +52,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     badge: 'Must Visit',
     location: 'Paradise Island, Giftun',
     accentColor: '#F59E0B',
-    fallbackUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85',
+    fallbackUrl: '/images/orange_bay_beach.jpg',
     description: 'Hurghada’s world-famous beach haven. Bask under the sun, unwind in handwoven hammocks, and take memorable photos.',
     whatsappPrompt: 'Hello EGY TOUR! I would love to visit Paradise Island with hotel pickup.'
   },
@@ -66,7 +66,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     badge: 'UNESCO Heritage',
     location: 'Giza Plateau, Cairo',
     accentColor: '#D4AF37',
-    fallbackUrl: 'https://images.unsplash.com/photo-1503177112294-7de59fb45731?auto=format&fit=crop&w=2000&q=85',
+    fallbackUrl: '/images/giza_pyramids.jpg',
     description: 'Day tour from Hurghada to Cairo in executive Mercedes transport. Explore the Great Pyramid of Khufu, Sphinx, and the Grand Egyptian Museum.',
     whatsappPrompt: 'Hello EGY TOUR! I want to book the Day Tour to the Giza Pyramids and Sphinx.'
   },
@@ -122,7 +122,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     badge: 'Action Packed',
     location: 'Eastern Desert, Hurghada',
     accentColor: '#FB923C',
-    fallbackUrl: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=2000&q=85',
+    fallbackUrl: '/images/sahara_super_safari.jpg',
     description: 'Convoy across golden sands, conquer desert mountain tracks, visit an authentic Bedouin camp, and enjoy hot herbal tea at sunset.',
     whatsappPrompt: 'Hello EGY TOUR! I want to book the Super Quad Desert Safari with Bedouin dinner.'
   },
