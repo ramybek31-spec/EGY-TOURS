@@ -390,9 +390,9 @@ export const TRIPS_DATA: Trip[] = [
     badge: 'New',
     shortDesc: 'Jeep safari into the Eastern Desert, stargazing with an astronomy guide, Bedouin dinner included.',
     fullDesc: 'Away from the city lights of Hurghada, the Saharan night sky displays an astonishing blanket of millions of stars, constellations, and the Milky Way. Travel by 4x4 into a secluded canyon, view Saturn’s rings and deep-space nebulae through high-powered telescopes guided by an astronomer, and enjoy a candlelit Bedouin dinner.',
-    image: '/images/safari_stargazing_egypt.jpg',
+    image: 'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
-      '/images/safari_stargazing_egypt.jpg',
+      'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80',
       '/images/safari_desert_camp.jpg',
       '/images/sahara_super_safari.jpg'
     ],

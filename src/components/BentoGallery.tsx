@@ -121,7 +121,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Paradise Island Sands & Sunbeds',
     location: 'Giftun Island Marine Reserve',
     description: 'Exclusive beachside sun loungers, open-air dining, and serene reef snorkeling right off the shore.',
-    src: 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1600&q=80'
+    src: '/images/paradise_island_hurghada.jpg'
   },
   {
     id: '11',
@@ -134,12 +134,12 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: '12',
-    tag: 'Mountain Vista',
-    category: 'adventure',
-    title: 'Golden Hour Desert Vista & Stargazing',
-    location: 'Red Sea Mountain Range',
-    description: 'Stargaze under crisp desert constellations after an awe-inspiring sunset panoramic overlook.',
-    src: '/images/safari_stargazing_egypt.jpg'
+    tag: 'Coral Sanctuary',
+    category: 'sea',
+    title: 'Red Sea Blue Coral Gardens',
+    location: 'Hurghada Protected Marine Park',
+    description: 'Explore vibrant electric-blue branching corals, sea fans, and schools of tropical reef fish in crystal-clear waters.',
+    src: '/images/blue_coral_reef.jpg'
   }
 ];
 

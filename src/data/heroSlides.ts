@@ -29,20 +29,6 @@ export const HERO_SLIDES: HeroSlide[] = [
     whatsappPrompt: 'Hello EGY TOUR! I would like to inquire about booking the Nefertari Royal VIP Lounge cruise.'
   },
   {
-    id: 'vip-speedboat',
-    fileName: 'speed3.webp',
-    title: 'Private VIP Speedboat',
-    subtitle: 'Glide across shallow crystal lagoons with private captain & custom island hopping',
-    category: 'Private Marine Charter',
-    highlight: '⚡ High-Speed Turquoise Lagoon Run',
-    badge: 'Private Charter',
-    location: 'Hurghada Archipelago',
-    accentColor: '#5ce1e6',
-    fallbackUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=85',
-    description: 'Custom private speed boat with sunshade canopy, luxury seating, and agile access to secluded sandbanks and shallow reefs.',
-    whatsappPrompt: 'Hello EGY TOUR! I want to book a Private VIP Speedboat tour for my group.'
-  },
-  {
     id: 'paradise-island',
     fileName: 'paradise (2).jpeg',
     title: 'Paradise Island Sunset',
@@ -150,7 +136,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     badge: 'Chilled Atmosphere',
     location: 'Bianka Island, Hurghada',
     accentColor: '#2DD4BF',
-    fallbackUrl: 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=2000&q=85',
+    fallbackUrl: '/images/paradise_island_hurghada.jpg',
     description: 'Relax in open-air woven hammocks suspended above the crystal waters as warm sea breezes blow across the lagoon.',
     whatsappPrompt: 'Hello EGY TOUR! I want to reserve a day pass to Bianka Island hammocks.'
   },

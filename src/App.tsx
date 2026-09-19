@@ -22,14 +22,7 @@ import { detectVisitorLanguage } from './utils/whatsapp';
 export default function App() {
   const [currentLang, setCurrentLang] = useState<SupportedLanguage>(() => detectVisitorLanguage());
   const [currentCurrency, setCurrentCurrency] = useState<CurrencyCode>('EUR');
-  const [isIntroOpen, setIsIntroOpen] = useState<boolean>(() => {
-    try {
-      // Automatically launch cinematic intro once per browsing session
-      return !sessionStorage.getItem('egy_tours_intro_seen');
-    } catch {
-      return true;
-    }
-  });
+  const [isIntroOpen, setIsIntroOpen] = useState<boolean>(false);
 
   const handleCloseIntro = () => {
     setIsIntroOpen(false);
