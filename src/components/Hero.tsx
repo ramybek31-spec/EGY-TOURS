@@ -255,6 +255,7 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenIntro }) => {
             className="flex flex-col items-center"
           >
             <h1 className="font-heading text-3xl xs:text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.12] mb-3 sm:mb-4 drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)]">
+              <span className="sr-only">EGY TOUR Hurghada Excursions &amp; Red Sea Tours Egypt - </span>
               {currentSlide.title.split(' ')[0]}{' '}
               <span className="bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#FFF4C2] bg-clip-text text-transparent italic drop-shadow-[0_0_25px_rgba(212,175,55,0.35)]">
                 {currentSlide.title.split(' ').slice(1).join(' ')}

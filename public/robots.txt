@@ -1,5 +1,23 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 
-# Sitemaps
+# Specific major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Canonical Sitemaps
 Sitemap: https://www.egy-tour.com/sitemap.xml
